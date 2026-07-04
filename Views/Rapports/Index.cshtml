@@ -1,0 +1,112 @@
+﻿@model IEnumerable<tedd.Models.RapportFinancier>
+@{
+    ViewData["Title"] = "Rapports Financiers";
+}
+
+<div class="container-fluid">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1>
+            <i class="fas fa-chart-pie text-primary me-2"></i>Rapports Financiers
+        </h1>
+        <a asp-action="Generate" class="btn btn-primary">
+            <i class="fas fa-plus"></i> Générer un rapport
+        </a>
+    </div>
+
+    @if (TempData["Success"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <i class="fas fa-check-circle"></i> @TempData["Success"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    }
+
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <i class="fas fa-exclamation-circle"></i> @TempData["Error"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    }
+
+    <div class="card shadow mb-4">
+        <div class="card-body">
+            @if (!Model.Any())
+            {
+                <div class="text-center py-5">
+                    <i class="fas fa-file-alt fa-4x text-muted mb-3"></i>
+                    <h5>Aucun rapport généré</h5>
+                    <p class="text-muted">Cliquez sur "Générer un rapport" pour créer votre premier rapport financier.</p>
+                </div>
+            }
+            else
+            {
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>Période</th>
+                                <th class="text-end">Total Ventes</th>
+                                <th class="text-end">Total Paiements</th>
+                                <th class="text-end">Bénéfice</th>
+                                <th>Date génération</th>
+                                <th class="text-center">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td><strong>@item.Periode</strong></td>
+                                    <td class="text-end text-success">@item.TotalVentes.ToString("N0") Ar</td>
+                                    <td class="text-end text-danger">@item.TotalPaiements.ToString("N0") Ar</td>
+                                    <td class="text-end fw-bold @(item.Benefice >= 0 ? "text-success" : "text-danger")">
+                                        @item.Benefice.ToString("N0") Ar
+                                    </td>
+                                    <td>@item.DateGeneration.ToString("dd/MM/yyyy HH:mm")</td>
+                                    <td class="text-center">
+                                        <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-info" title="Détails">
+                                            <i class="fas fa-eye"></i>
+                                        </a>
+                                        <a asp-action="ExportPDF" asp-route-id="@item.Id" class="btn btn-sm btn-danger" title="PDF">
+                                            <i class="fas fa-file-pdf"></i>
+                                        </a>
+                                        <a asp-action="ExportExcel" asp-route-id="@item.Id" class="btn btn-sm btn-success" title="Excel">
+                                            <i class="fas fa-file-excel"></i>
+                                        </a>
+                                        <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-danger delete-confirm" title="Supprimer">
+                                            <i class="fas fa-trash"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                        <tfoot>
+                            <tr class="table-primary fw-bold">
+                                <td>Total général</td>
+                                <td class="text-end">@Model.Sum(r => r.TotalVentes).ToString("N0") Ar</td>
+                                <td class="text-end">@Model.Sum(r => r.TotalPaiements).ToString("N0") Ar</td>
+                                <td class="text-end">@Model.Sum(r => r.Benefice).ToString("N0") Ar</td>
+                                <td colspan="2"></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function() {
+            $('#dataTable').DataTable({
+                language: {
+                    url: '//cdn.datatables.net/plug-ins/1.13.7/i18n/fr-FR.json'
+                },
+                responsive: true,
+                order: [[4, 'desc']]
+            });
+        });
+    </script>
+}

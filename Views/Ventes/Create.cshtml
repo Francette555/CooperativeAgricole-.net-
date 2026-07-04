@@ -1,0 +1,72 @@
+﻿@model tedd.Models.Vente
+@{
+    ViewData["Title"] = "Nouvelle vente";
+}
+
+<div class="container-fluid">
+    <h1 class="mb-4">@ViewData["Title"]</h1>
+
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <i class="fas fa-exclamation-circle"></i> @TempData["Error"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    }
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card shadow">
+                <div class="card-body">
+                    <form asp-action="Create">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        
+                        <div class="form-group mb-3">
+                            <label asp-for="TypeProduitId" class="control-label fw-bold">Produit</label>
+                            <select asp-for="TypeProduitId" class="form-control">
+                                <option value="">-- Sélectionner un produit --</option>
+                                @if (ViewBag.TypesProduits != null)
+                                {
+                                    foreach (var type in ViewBag.TypesProduits as List<tedd.Models.TypeProduit>)
+                                    {
+                                        <option value="@type.Id">@type.Nom</option>
+                                    }
+                                }
+                            </select>
+                            <span asp-validation-for="TypeProduitId" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label asp-for="Quantite" class="control-label fw-bold">Quantité (kg)</label>
+                            <input asp-for="Quantite" class="form-control" type="number" step="0.01" min="0.01" />
+                            <span asp-validation-for="Quantite" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label asp-for="PrixUnitaire" class="control-label fw-bold">Prix unitaire (Ar/kg)</label>
+                            <input asp-for="PrixUnitaire" class="form-control" type="number" step="0.01" min="0.01" />
+                            <span asp-validation-for="PrixUnitaire" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label asp-for="Client" class="control-label fw-bold">Client</label>
+                            <input asp-for="Client" class="form-control" placeholder="Nom du client" />
+                            <span asp-validation-for="Client" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-save"></i> Enregistrer
+                            </button>
+                            <a asp-action="Index" class="btn btn-secondary">Annuler</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

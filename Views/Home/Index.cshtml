@@ -1,0 +1,148 @@
+﻿@model tedd.ViewModels.DashboardViewModel
+@{
+    ViewData["Title"] = "Tableau de bord";
+}
+
+<div class="container-fluid">
+    <h1 class="mb-4">@ViewData["Title"]</h1>
+
+    <!-- Statistiques -->
+    <div class="row">
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                Producteurs
+                            </div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">@Model.NombreProducteurs</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-users fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-success shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                Récoltes totales
+                            </div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">@Model.TotalRecoltes.ToString("N2") kg</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-tractor fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-info shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
+                                Ventes totales
+                            </div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">@Model.TotalVentes.ToString("C")</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-shopping-cart fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-warning shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                Bénéfice
+                            </div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">@Model.Benefice.ToString("C")</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-chart-line fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Stock et Activités -->
+    <div class="row">
+        <div class="col-xl-6 col-lg-6">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">État des stocks</h6>
+                </div>
+                <div class="card-body">
+                    @foreach (var produit in Model.ProduitsEnStock)
+                    {
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between">
+                                <span>@produit.NomProduit</span>
+                                <span>@produit.Quantite @produit.Unite</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar @(produit.EstEnAlerte ? "bg-danger" : "bg-success")"
+                                     style="width: @(Math.Min((produit.Quantite / 1000) * 100, 100))%">
+                                </div>
+                            </div>
+                            @if (produit.EstEnAlerte)
+                            {
+                                <small class="text-danger">⚠️ Stock bas !</small>
+                            }
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-4">
+            <a asp-controller="Rapports" asp-action="Generate" class="btn btn-success">
+                <i class="fas fa-plus-circle me-2"></i>Générer un rapport financier
+            </a>
+            <a asp-controller="Rapports" asp-action="Index" class="btn btn-primary">
+                <i class="fas fa-list me-2"></i>Voir tous les rapports
+            </a>
+        </div>
+
+        <div class="col-xl-6 col-lg-6">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Activités récentes</h6>
+                </div>
+                <div class="card-body">
+                    <div class="timeline">
+                        @foreach (var activite in Model.ActivitesRecentes)
+                        {
+                            <div class="timeline-item mb-3">
+                                <div class="d-flex justify-content-between">
+                                    <span>
+                                        <span class="badge @(activite.Type == "Récolte" ? "bg-success" : activite.Type == "Vente" ? "bg-info" : "bg-warning")">
+                                            @activite.Type
+                                        </span>
+                                        @activite.Description
+                                    </span>
+                                    <small class="text-muted">@activite.Date.ToString("dd/MM/yyyy HH:mm")</small>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

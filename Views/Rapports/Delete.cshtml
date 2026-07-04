@@ -1,0 +1,50 @@
+﻿@model tedd.Models.RapportFinancier
+@{
+    ViewData["Title"] = "Supprimer un rapport";
+}
+
+<div class="container-fluid">
+    <h1 class="mb-4 text-danger">
+        <i class="fas fa-trash-alt me-2"></i>@ViewData["Title"]
+    </h1>
+
+    <div class="alert alert-warning">
+        <i class="fas fa-exclamation-triangle me-2"></i>
+        Êtes-vous sûr de vouloir supprimer ce rapport ? Cette action est irréversible.
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card shadow">
+                <div class="card-body">
+                    <dl class="row">
+                        <dt class="col-sm-4 fw-bold">Période</dt>
+                        <dd class="col-sm-8">@Model.Periode</dd>
+
+                        <dt class="col-sm-4 fw-bold">Total Ventes</dt>
+                        <dd class="col-sm-8 text-success">@Model.TotalVentes.ToString("N0") Ar</dd>
+
+                        <dt class="col-sm-4 fw-bold">Total Paiements</dt>
+                        <dd class="col-sm-8 text-danger">@Model.TotalPaiements.ToString("N0") Ar</dd>
+
+                        <dt class="col-sm-4 fw-bold">Bénéfice</dt>
+                        <dd class="col-sm-8 fw-bold @(Model.Benefice >= 0 ? "text-success" : "text-danger")">
+                            @Model.Benefice.ToString("N0") Ar
+                        </dd>
+
+                        <dt class="col-sm-4 fw-bold">Date de génération</dt>
+                        <dd class="col-sm-8">@Model.DateGeneration.ToString("dd/MM/yyyy HH:mm")</dd>
+                    </dl>
+
+                    <form asp-action="Delete">
+                        <input type="hidden" asp-for="Id" />
+                        <button type="submit" class="btn btn-danger">
+                            <i class="fas fa-trash-alt me-2"></i>Supprimer
+                        </button>
+                        <a asp-action="Index" class="btn btn-secondary">Annuler</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

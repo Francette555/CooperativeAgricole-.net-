@@ -1,0 +1,69 @@
+﻿@model tedd.Models.Producteur
+@{
+    ViewData["Title"] = "Nouveau Producteur";
+}
+
+<div class="container-fluid">
+    <h1 class="mb-4">@ViewData["Title"]</h1>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card shadow">
+                <div class="card-body">
+                    <form asp-action="Create">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        
+                        <div class="form-group mb-3">
+                            <label asp-for="Nom" class="control-label fw-bold"></label>
+                            <input asp-for="Nom" class="form-control" placeholder="Entrez le nom" />
+                            <span asp-validation-for="Nom" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label asp-for="Prenom" class="control-label fw-bold"></label>
+                            <input asp-for="Prenom" class="form-control" placeholder="Entrez le prénom" />
+                            <span asp-validation-for="Prenom" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label asp-for="Telephone" class="control-label fw-bold"></label>
+                            <input asp-for="Telephone" class="form-control" placeholder="034 12 345 67" />
+                            <span asp-validation-for="Telephone" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label asp-for="Email" class="control-label fw-bold"></label>
+                            <input asp-for="Email" class="form-control" placeholder="email@exemple.com" />
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label asp-for="Adresse" class="control-label fw-bold"></label>
+                            <textarea asp-for="Adresse" class="form-control" rows="3" placeholder="Adresse complète"></textarea>
+                            <span asp-validation-for="Adresse" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label asp-for="EstActif" class="control-label fw-bold"></label>
+                            <div class="form-check">
+                                <input asp-for="EstActif" class="form-check-input" />
+                                <label class="form-check-label" asp-for="EstActif">Actif</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-save"></i> Enregistrer
+                            </button>
+                            <a asp-action="Index" class="btn btn-secondary">Annuler</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

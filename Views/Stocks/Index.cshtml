@@ -1,0 +1,58 @@
+﻿@model IEnumerable<tedd.Models.Stock>
+@{
+    ViewData["Title"] = "Gestion des stocks";
+}
+
+<div class="container-fluid">
+    <h1 class="mb-4">Gestion des stocks</h1>
+
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card @(item.Quantite < item.SeuilAlerte ? "border-danger" : "border-success")">
+                    <div class="card-header">
+                        <h5 class="card-title mb-0">@item.TypeProduit?.Nom</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="h4">@item.Quantite.ToString("N2") @item.TypeProduit?.Unite</span>
+                            <span class="badge @(item.Quantite < item.SeuilAlerte ? "bg-danger" : "bg-success")">
+                                @if (item.Quantite < item.SeuilAlerte)
+                                {
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                   // Stock bas
+                                }
+                                else
+                                {
+                                    <i class="fas fa-check-circle"></i>
+                                   // Stock OK
+                                }
+                            </span>
+                        </div>
+                        <div class="progress mb-2">
+                            @{
+                                var pourcentage = Math.Min((item.Quantite / (item.SeuilAlerte * 2)) * 100, 100);
+                            }
+                            <div class="progress-bar @(item.Quantite < item.SeuilAlerte ? "bg-danger" : "bg-success")"
+                                 style="width: @pourcentage%">
+                            </div>
+                        </div>
+                        <small class="text-muted">
+                            Seuil d'alerte : @item.SeuilAlerte.ToString("N2") @item.TypeProduit?.Unite
+                        </small>
+                        <br />
+                        <small class="text-muted">
+                            Dernière mise à jour : @item.DateMiseAJour.ToString("dd/MM/yyyy HH:mm")
+                        </small>
+                    </div>
+                    <div class="card-footer">
+                        <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning btn-sm">
+                            <i class="fas fa-edit"></i> Modifier
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

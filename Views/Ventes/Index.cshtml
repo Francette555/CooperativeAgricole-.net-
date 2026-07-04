@@ -1,0 +1,79 @@
+﻿@model IEnumerable<tedd.Models.Vente>
+@{
+    ViewData["Title"] = "Gestion des ventes";
+}
+
+<div class="container-fluid">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1>@ViewData["Title"]</h1>
+        <a asp-action="Create" class="btn btn-primary">
+            <i class="fas fa-plus"></i> Nouvelle vente
+        </a>
+    </div>
+
+    @if (TempData["Success"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <i class="fas fa-check-circle"></i> @TempData["Success"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    }
+
+    <div class="card shadow mb-4">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Produit</th>
+                            <th>Quantité</th>
+                            <th>Prix unitaire</th>
+                            <th>Montant total</th>
+                            <th>Client</th>
+                            <th>Date</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.TypeProduit?.Nom</td>
+                                <td>@item.Quantite.ToString("N2") @item.TypeProduit?.Unite</td>
+                                <td>@item.PrixUnitaire.ToString("N0") Ar</td>
+                                <td class="fw-bold text-success">@item.MontantTotal.ToString("N0") Ar</td>
+                                <td>@item.Client</td>
+                                <td>@item.DateVente.ToString("dd/MM/yyyy HH:mm")</td>
+                                <td>
+                                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-danger delete-confirm" title="Supprimer">
+                                        <i class="fas fa-trash"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                    <tfoot>
+                        <tr class="fw-bold table-success">
+                            <td colspan="3" class="text-end">Total des ventes :</td>
+                            <td colspan="3">@Model.Sum(v => v.MontantTotal).ToString("N0") Ar</td>
+                            <td></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function() {
+            $('#dataTable').DataTable({
+                language: {
+                    url: '//cdn.datatables.net/plug-ins/1.13.7/i18n/fr-FR.json'
+                },
+                responsive: true
+            });
+        });
+    </script>
+}

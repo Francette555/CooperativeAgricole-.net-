@@ -1,0 +1,100 @@
+/* Style personnalisé */
+body {
+    background-color: #f8f9fa;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+.card {
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+.card-header {
+    border-radius: 10px 10px 0 0 !important;
+}
+
+.border-left-primary {
+    border-left: 4px solid #4e73df;
+}
+
+.border-left-success {
+    border-left: 4px solid #1cc88a;
+}
+
+.border-left-info {
+    border-left: 4px solid #36b9cc;
+}
+
+.border-left-warning {
+    border-left: 4px solid #f6c23e;
+}
+
+.progress {
+    height: 10px;
+    border-radius: 5px;
+}
+
+.timeline-item {
+    border-bottom: 1px solid #e3e6f0;
+    padding-bottom: 10px;
+}
+
+    .timeline-item:last-child {
+        border-bottom: none;
+    }
+
+.badge {
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.table {
+    font-size: 14px;
+}
+
+    .table th {
+        background-color: #f8f9fc;
+        color: #4e73df;
+    }
+
+.btn-sm {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    margin: 0 2px;
+}
+
+.footer {
+    background-color: #fff;
+    border-top: 1px solid #dee2e6;
+    padding: 20px 0;
+    margin-top: 30px;
+}
+
+/* Animation des alertes */
+.alert {
+    animation: slideDown 0.5s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Style des cartes de stock */
+.card-stock {
+    transition: transform 0.3s;
+}
+
+    .card-stock:hover {
+        transform: translateY(-5px);
+    }

@@ -1,0 +1,107 @@
+﻿@{
+    ViewData["Title"] = "Générer un rapport";
+}
+
+<div class="container-fluid">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1>
+            <i class="fas fa-plus-circle text-success me-2"></i>Générer un rapport financier
+        </h1>
+        <a asp-action="Index" class="btn btn-secondary">
+            <i class="fas fa-arrow-left"></i> Retour
+        </a>
+    </div>
+
+    @if (TempData["Success"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <i class="fas fa-check-circle"></i> @TempData["Success"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    }
+
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <i class="fas fa-exclamation-circle"></i> @TempData["Error"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    }
+
+    @if (TempData["Warning"] != null)
+    {
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <i class="fas fa-exclamation-triangle"></i> @TempData["Warning"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    }
+
+    @if (ViewBag.RapportExistant != null)
+    {
+        var rapport = ViewBag.RapportExistant as tedd.Models.RapportFinancier;
+        <div class="alert alert-info">
+            <i class="fas fa-info-circle"></i>
+            Un rapport existe déjà pour <strong>@rapport.Periode</strong>.
+            <a asp-action="Details" asp-route-id="@rapport.Id" class="alert-link">Voir le rapport existant</a>
+        </div>
+    }
+
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0">
+                        <i class="fas fa-calendar-alt me-2"></i>Sélectionner la période
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <form asp-action="Generate" method="post">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label fw-bold">Mois</label>
+                                <select name="mois" class="form-select" required>
+                                    <option value="">-- Sélectionner un mois --</option>
+                                    @foreach (var mois in ViewBag.ListeMois as List<SelectListItem>)
+                                    {
+                                        <option value="@mois.Value" selected="@(mois.Value == ViewBag.Mois.ToString())">
+                                            @mois.Text
+                                        </option>
+                                    }
+                                </select>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label fw-bold">Année</label>
+                                <select name="annee" class="form-select" required>
+                                    <option value="">-- Sélectionner une année --</option>
+                                    @foreach (var annee in ViewBag.ListeAnnees as List<SelectListItem>)
+                                    {
+                                        <option value="@annee.Value" selected="@(annee.Value == ViewBag.Annee.ToString())">
+                                            @annee.Text
+                                        </option>
+                                    }
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="alert alert-info mt-3">
+                            <i class="fas fa-info-circle me-2"></i>
+                            Le rapport généré inclura :
+                            <ul class="mb-0 mt-2">
+                                <li>✅ Total des ventes pour la période</li>
+                                <li>✅ Total des paiements effectués</li>
+                                <li>✅ Bénéfice calculé (Ventes - Paiements)</li>
+                                <li>✅ Détail des ventes par produit</li>
+                            </ul>
+                        </div>
+
+                        <div class="d-grid gap-2 mt-3">
+                            <button type="submit" class="btn btn-success btn-lg">
+                                <i class="fas fa-file-alt me-2"></i>Générer le rapport
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

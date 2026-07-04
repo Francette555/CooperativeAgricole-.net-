@@ -1,0 +1,50 @@
+﻿@model tedd.Models.Paiement
+@{
+    ViewData["Title"] = "Supprimer un paiement";
+}
+
+<div class="container-fluid">
+    <h1 class="mb-4 text-danger">@ViewData["Title"]</h1>
+
+    <div class="alert alert-warning">
+        <i class="fas fa-exclamation-triangle"></i>
+        Êtes-vous sûr de vouloir supprimer ce paiement ?
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card shadow">
+                <div class="card-body">
+                    <dl class="row">
+                        <dt class="col-sm-4 fw-bold">Producteur</dt>
+                        <dd class="col-sm-8">@Model.Producteur?.NomComplet</dd>
+
+                        <dt class="col-sm-4 fw-bold">Montant</dt>
+                        <dd class="col-sm-8">@Model.Montant.ToString("C")</dd>
+
+                        <dt class="col-sm-4 fw-bold">Date de paiement</dt>
+                        <dd class="col-sm-8">@Model.DatePaiement.ToString("dd/MM/yyyy")</dd>
+
+                        <dt class="col-sm-4 fw-bold">Mois</dt>
+                        <dd class="col-sm-8">@Model.Mois @Model.Annee</dd>
+
+                        <dt class="col-sm-4 fw-bold">Statut</dt>
+                        <dd class="col-sm-8">
+                            <span class="badge @(Model.Statut == "Payé" ? "bg-success" : "bg-warning")">
+                                @Model.Statut
+                            </span>
+                        </dd>
+                    </dl>
+
+                    <form asp-action="Delete">
+                        <input type="hidden" asp-for="Id" />
+                        <button type="submit" class="btn btn-danger">
+                            <i class="fas fa-trash"></i> Supprimer
+                        </button>
+                        <a asp-action="Index" class="btn btn-secondary">Annuler</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,62 @@
+﻿@model tedd.Models.Paiement
+@{
+    ViewData["Title"] = "Nouveau paiement";
+}
+
+<div class="container-fluid">
+    <h1 class="mb-4">@ViewData["Title"]</h1>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card shadow">
+                <div class="card-body">
+                    <form asp-action="Create">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        
+                        <div class="form-group mb-3">
+                            <label asp-for="ProducteurId" class="control-label fw-bold">Producteur</label>
+                            <select asp-for="ProducteurId" class="form-control">
+                                <option value="">-- Sélectionner un producteur --</option>
+                                @if (ViewBag.Producteurs != null)
+                                {
+                                    foreach (var producteur in ViewBag.Producteurs as List<tedd.Models.Producteur>)
+                                    {
+                                        <option value="@producteur.Id">@producteur.NomComplet</option>
+                                    }
+                                }
+                            </select>
+                            <span asp-validation-for="ProducteurId" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label asp-for="Montant" class="control-label fw-bold">Montant (Ar)</label>
+                            <input asp-for="Montant" class="form-control" type="number" step="0.01" min="0.01" />
+                            <span asp-validation-for="Montant" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label asp-for="Statut" class="control-label fw-bold">Statut</label>
+                            <select asp-for="Statut" class="form-control">
+                                <option value="Payé">Payé</option>
+                                <option value="En attente" selected>En attente</option>
+                                <option value="Annulé">Annulé</option>
+                            </select>
+                            <span asp-validation-for="Statut" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-save"></i> Enregistrer
+                            </button>
+                            <a asp-action="Index" class="btn btn-secondary">Annuler</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

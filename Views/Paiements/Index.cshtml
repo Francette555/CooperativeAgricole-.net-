@@ -1,0 +1,83 @@
+﻿@model IEnumerable<tedd.Models.Paiement>
+@{
+    ViewData["Title"] = "Gestion des paiements";
+}
+
+<div class="container-fluid">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1>@ViewData["Title"]</h1>
+        <a asp-action="Create" class="btn btn-primary">
+            <i class="fas fa-plus"></i> Nouveau paiement
+        </a>
+    </div>
+
+    @if (TempData["Success"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <i class="fas fa-check-circle"></i> @TempData["Success"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    }
+
+    <div class="card shadow mb-4">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Producteur</th>
+                            <th>Montant</th>
+                            <th>Date</th>
+                            <th>Mois</th>
+                            <th>Année</th>
+                            <th>Statut</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.Producteur?.NomComplet</td>
+                                <td class="fw-bold">@item.Montant.ToString("N0") Ar</td>
+                                <td>@item.DatePaiement.ToString("dd/MM/yyyy")</td>
+                                <td>@item.Mois</td>
+                                <td>@item.Annee</td>
+                                <td>
+                                    <span class="badge @(item.Statut == "Payé" ? "bg-success" : item.Statut == "En attente" ? "bg-warning" : "bg-danger")">
+                                        @item.Statut
+                                    </span>
+                                </td>
+                                <td>
+                                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-danger delete-confirm" title="Supprimer">
+                                        <i class="fas fa-trash"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                    <tfoot>
+                        <tr class="fw-bold table-warning">
+                            <td colspan="1" class="text-end">Total des paiements :</td>
+                            <td colspan="5">@Model.Sum(p => p.Montant).ToString("N0") Ar</td>
+                            <td></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function() {
+            $('#dataTable').DataTable({
+                language: {
+                    url: '//cdn.datatables.net/plug-ins/1.13.7/i18n/fr-FR.json'
+                },
+                responsive: true
+            });
+        });
+    </script>
+}

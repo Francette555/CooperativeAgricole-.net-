@@ -1,0 +1,49 @@
+﻿@model tedd.Models.Vente
+@{
+    ViewData["Title"] = "Supprimer une vente";
+}
+
+<div class="container-fluid">
+    <h1 class="mb-4 text-danger">@ViewData["Title"]</h1>
+
+    <div class="alert alert-warning">
+        <i class="fas fa-exclamation-triangle"></i>
+        Êtes-vous sûr de vouloir supprimer cette vente ? Le stock sera également ajusté.
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card shadow">
+                <div class="card-body">
+                    <dl class="row">
+                        <dt class="col-sm-4 fw-bold">Produit</dt>
+                        <dd class="col-sm-8">@Model.TypeProduit?.Nom</dd>
+
+                        <dt class="col-sm-4 fw-bold">Quantité</dt>
+                        <dd class="col-sm-8">@Model.Quantite.ToString("N2") @Model.TypeProduit?.Unite</dd>
+
+                        <dt class="col-sm-4 fw-bold">Prix unitaire</dt>
+                        <dd class="col-sm-8">@Model.PrixUnitaire.ToString("C")</dd>
+
+                        <dt class="col-sm-4 fw-bold">Montant total</dt>
+                        <dd class="col-sm-8">@Model.MontantTotal.ToString("C")</dd>
+
+                        <dt class="col-sm-4 fw-bold">Client</dt>
+                        <dd class="col-sm-8">@Model.Client</dd>
+
+                        <dt class="col-sm-4 fw-bold">Date de vente</dt>
+                        <dd class="col-sm-8">@Model.DateVente.ToString("dd/MM/yyyy HH:mm")</dd>
+                    </dl>
+
+                    <form asp-action="Delete">
+                        <input type="hidden" asp-for="Id" />
+                        <button type="submit" class="btn btn-danger">
+                            <i class="fas fa-trash"></i> Supprimer
+                        </button>
+                        <a asp-action="Index" class="btn btn-secondary">Annuler</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

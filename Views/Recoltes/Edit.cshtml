@@ -1,0 +1,88 @@
+﻿@model tedd.Models.Recolte
+@{
+    ViewData["Title"] = "Modifier une récolte";
+}
+
+<div class="container-fluid">
+    <h1 class="mb-4">@ViewData["Title"]</h1>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card shadow">
+                <div class="card-body">
+                    <form asp-action="Edit">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <input type="hidden" asp-for="Id" />
+                        
+                        <div class="form-group mb-3">
+                            <label asp-for="ProducteurId" class="control-label fw-bold">Producteur</label>
+                            <select asp-for="ProducteurId" class="form-control">
+                                <option value="">-- Sélectionner un producteur --</option>
+                                @if (ViewBag.Producteurs != null)
+                                {
+                                    foreach (var producteur in ViewBag.Producteurs as List<tedd.Models.Producteur>)
+                                    {
+                                        <option value="@producteur.Id" selected="@(producteur.Id == Model.ProducteurId)">
+                                            @producteur.NomComplet
+                                        </option>
+                                    }
+                                }
+                            </select>
+                            <span asp-validation-for="ProducteurId" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label asp-for="TypeProduitId" class="control-label fw-bold">Type de produit</label>
+                            <select asp-for="TypeProduitId" class="form-control">
+                                <option value="">-- Sélectionner un produit --</option>
+                                @if (ViewBag.TypesProduits != null)
+                                {
+                                    foreach (var type in ViewBag.TypesProduits as List<tedd.Models.TypeProduit>)
+                                    {
+                                        <option value="@type.Id" selected="@(type.Id == Model.TypeProduitId)">
+                                            @type.Nom
+                                        </option>
+                                    }
+                                }
+                            </select>
+                            <span asp-validation-for="TypeProduitId" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label asp-for="Quantite" class="control-label fw-bold">Quantité (kg)</label>
+                            <input asp-for="Quantite" class="form-control" type="number" step="0.01" min="0.01" />
+                            <span asp-validation-for="Quantite" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label asp-for="Qualite" class="control-label fw-bold">Qualité</label>
+                            <select asp-for="Qualite" class="form-control">
+                                <option value="Premium" selected="@(Model.Qualite == "Premium")">Premium</option>
+                                <option value="Standard" selected="@(Model.Qualite == "Standard")">Standard</option>
+                                <option value="Basique" selected="@(Model.Qualite == "Basique")">Basique</option>
+                            </select>
+                            <span asp-validation-for="Qualite" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label asp-for="DateRecolte" class="control-label fw-bold">Date de récolte</label>
+                            <input asp-for="DateRecolte" class="form-control" type="datetime-local" />
+                            <span asp-validation-for="DateRecolte" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-save"></i> Enregistrer
+                            </button>
+                            <a asp-action="Index" class="btn btn-secondary">Annuler</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,58 @@
+﻿@model tedd.Models.Producteur
+@{
+    ViewData["Title"] = "Supprimer un Producteur";
+}
+
+<div class="container-fluid">
+    <h1 class="mb-4 text-danger">@ViewData["Title"]</h1>
+
+    <div class="alert alert-warning">
+        <i class="fas fa-exclamation-triangle"></i>
+        Êtes-vous sûr de vouloir supprimer ce producteur ? Cette action est irréversible.
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card shadow">
+                <div class="card-body">
+                    <dl class="row">
+                        <dt class="col-sm-4 fw-bold">Nom complet</dt>
+                        <dd class="col-sm-8">@Model.NomComplet</dd>
+
+                        <dt class="col-sm-4 fw-bold">Téléphone</dt>
+                        <dd class="col-sm-8">@Model.Telephone</dd>
+
+                        <dt class="col-sm-4 fw-bold">Email</dt>
+                        <dd class="col-sm-8">@Model.Email</dd>
+
+                        <dt class="col-sm-4 fw-bold">Adresse</dt>
+                        <dd class="col-sm-8">@Model.Adresse</dd>
+
+                        <dt class="col-sm-4 fw-bold">Date d'inscription</dt>
+                        <dd class="col-sm-8">@Model.DateInscription.ToString("dd/MM/yyyy")</dd>
+
+                        <dt class="col-sm-4 fw-bold">Statut</dt>
+                        <dd class="col-sm-8">
+                            @if (Model.EstActif)
+                            {
+                                <span class="badge bg-success">Actif</span>
+                            }
+                            else
+                            {
+                                <span class="badge bg-danger">Inactif</span>
+                            }
+                        </dd>
+                    </dl>
+
+                    <form asp-action="Delete">
+                        <input type="hidden" asp-for="Id" />
+                        <button type="submit" class="btn btn-danger">
+                            <i class="fas fa-trash"></i> Supprimer
+                        </button>
+                        <a asp-action="Index" class="btn btn-secondary">Annuler</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

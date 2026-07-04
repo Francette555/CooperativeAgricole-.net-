@@ -1,0 +1,231 @@
+﻿@model tedd.Models.RapportFinancier
+@{
+    ViewData["Title"] = $"Rapport - {Model.Periode}";
+}
+
+<div class="container-fluid">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1>
+            <i class="fas fa-file-alt text-primary me-2"></i>Rapport financier
+            <small class="text-muted fs-6">@Model.Periode</small>
+        </h1>
+        <div>
+            <a asp-action="ExportPDF" asp-route-id="@Model.Id" class="btn btn-danger">
+                <i class="fas fa-file-pdf"></i> PDF
+            </a>
+            <a asp-action="ExportExcel" asp-route-id="@Model.Id" class="btn btn-success">
+                <i class="fas fa-file-excel"></i> Excel
+            </a>
+            <a asp-action="Index" class="btn btn-secondary">
+                <i class="fas fa-arrow-left"></i> Retour
+            </a>
+        </div>
+    </div>
+
+    <!-- Résumé des indicateurs -->
+    <div class="row mb-4">
+        <div class="col-md-3">
+            <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                Période
+                            </div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">@Model.Periode</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card border-left-success shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                Total Ventes
+                            </div>
+                            <div class="h5 mb-0 font-weight-bold text-success">@Model.TotalVentes.ToString("N0") Ar</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-shopping-cart fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card border-left-danger shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">
+                                Total Paiements
+                            </div>
+                            <div class="h5 mb-0 font-weight-bold text-danger">@Model.TotalPaiements.ToString("N0") Ar</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-money-bill-wave fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card border-left-warning shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                Bénéfice
+                            </div>
+                            <div class="h5 mb-0 font-weight-bold @(Model.Benefice >= 0 ? "text-success" : "text-danger")">
+                                @Model.Benefice.ToString("N0") Ar
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-chart-line fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- Détail des ventes par produit -->
+        <div class="col-md-6">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">
+                        <i class="fas fa-chart-bar me-2"></i>Ventes par produit
+                    </h6>
+                </div>
+                <div class="card-body">
+                    @if (ViewBag.VentesParProduit != null && ((Dictionary<string, decimal>)ViewBag.VentesParProduit).Any())
+                    {
+                        var ventes = (Dictionary<string, decimal>)ViewBag.VentesParProduit;
+                        <div class="table-responsive">
+                            <table class="table table-sm">
+                                <thead>
+                                    <tr>
+                                        <th>Produit</th>
+                                        <th class="text-end">Montant</th>
+                                        <th class="text-end">%</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in ventes)
+                                    {
+                                        var pourcentage = ventes.Values.Sum() > 0 ? (item.Value / ventes.Values.Sum() * 100) : 0;
+                                        <tr>
+                                            <td>@item.Key</td>
+                                            <td class="text-end">@item.Value.ToString("N0") Ar</td>
+                                            <td class="text-end">@pourcentage.ToString("F1")%</td>
+                                        </tr>
+                                    }
+                                </tbody>
+                                <tfoot>
+                                    <tr class="fw-bold">
+                                        <td>Total</td>
+                                        <td class="text-end">@ventes.Values.Sum().ToString("N0") Ar</td>
+                                        <td class="text-end">100%</td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    }
+                    else
+                    {
+                        <p class="text-muted">Aucune vente enregistrée pour cette période.</p>
+                    }
+                </div>
+            </div>
+        </div>
+
+        <!-- Paiements en attente -->
+        <div class="col-md-6">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-warning">
+                        <i class="fas fa-clock me-2"></i>Paiements en attente
+                    </h6>
+                </div>
+                <div class="card-body">
+                    @if (ViewBag.PaiementsNonPayes != null && ((List<tedd.Models.Paiement>)ViewBag.PaiementsNonPayes).Any())
+                    {
+                        var paiements = (List<tedd.Models.Paiement>)ViewBag.PaiementsNonPayes;
+                        <div class="table-responsive">
+                            <table class="table table-sm">
+                                <thead>
+                                    <tr>
+                                        <th>Producteur</th>
+                                        <th class="text-end">Montant</th>
+                                        <th>Date</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in paiements.Take(10))
+                                    {
+                                        <tr>
+                                            <td>@item.Producteur?.NomComplet</td>
+                                            <td class="text-end text-warning">@item.Montant.ToString("N0") Ar</td>
+                                            <td>@item.DatePaiement.ToString("dd/MM/yyyy")</td>
+                                        </tr>
+                                    }
+                                </tbody>
+                                @if (paiements.Count > 10)
+                                {
+                                    <tfoot>
+                                        <tr>
+                                            <td colspan="3" class="text-center text-muted">
+                                                <small>+ @(paiements.Count - 10) autres paiements en attente</small>
+                                            </td>
+                                        </tr>
+                                    </tfoot>
+                                }
+                            </table>
+                        </div>
+                        <div class="text-end">
+                            <span class="fw-bold">Total en attente : @paiements.Sum(p => p.Montant).ToString("N0") Ar</span>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="text-center py-3">
+                            <i class="fas fa-check-circle fa-3x text-success mb-3"></i>
+                            <p class="text-muted">Aucun paiement en attente</p>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Informations du rapport -->
+    <div class="card shadow">
+        <div class="card-footer text-muted">
+            <div class="row">
+                <div class="col-md-6">
+                    <small>
+                        <i class="fas fa-calendar-alt me-1"></i>
+                        Généré le : @Model.DateGeneration.ToString("dd/MM/yyyy à HH:mm")
+                    </small>
+                </div>
+                <div class="col-md-6 text-end">
+                    <small>
+                        <i class="fas fa-code me-1"></i>
+                        ID : #@Model.Id
+                    </small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
