@@ -20,10 +20,10 @@
         public bool EstEnAlerte { get; set; }
     }
 
-    public class RecenteActivite
+   /* public class RecenteActivite
     {
         public string Description { get; set; }
         public DateTime Date { get; set; }
         public string Type { get; set; }
-    }
+    }*/
 }

@@ -1,5 +1,5 @@
-﻿// Services/IRapportService.cs
-using tedd.Models;
+﻿using tedd.Models;
+using tedd.ViewModels;
 
 namespace tedd.Services
 {
@@ -13,6 +13,6 @@ namespace tedd.Services
         Task<List<RapportFinancier>> GetRapportsHistorique();
         Task<RapportFinancier> GetRapportById(int id);
         Task<byte[]> ExporterRapportPDF(int id);
-        Task<byte[]> ExporterRapportExcel(int id);
+        Task<DashboardViewModel> GetDashboardData();
     }
 }

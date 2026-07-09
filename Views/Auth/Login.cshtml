@@ -1,0 +1,386 @@
+﻿@model tedd.Models.LoginViewModel
+@{
+    ViewData["Title"] = "Connexion";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Coopérative Agricole</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
+    <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                min-height: 100vh;
+                background: linear-gradient(135deg, #e8f5e9, #c8e6c9, #a5d6a7, #81c784);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 20px;
+            }
+
+            /* Carte principale */
+            .card-login {
+                width: 100%;
+                max-width: 420px;
+                border: none;
+                border-radius: 20px;
+                background: #ffffff;
+                box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+                overflow: hidden;
+            }
+
+            /* En-tête */
+            .card-header-custom {
+                background: linear-gradient(135deg, #1a3c2a, #2d5a3d, #3d6b4f);
+                padding: 35px 30px 30px;
+                text-align: center;
+            }
+
+            .logo-icon {
+                display: inline-block;
+                width: 75px;
+                height: 75px;
+                line-height: 75px;
+                background: rgba(255, 255, 255, 0.15);
+                border-radius: 50%;
+                font-size: 35px;
+                color: #ffffff;
+                border: 2px solid rgba(255, 255, 255, 0.2);
+            }
+
+            .card-header-custom h4 {
+                color: #ffffff;
+                font-family: 'Playfair Display', serif;
+                font-weight: 700;
+                font-size: 26px;
+                margin: 10px 0 0;
+            }
+
+            .card-header-custom .subtitle {
+                color: rgba(255, 255, 255, 0.8);
+                font-size: 13px;
+                display: block;
+                margin-top: 4px;
+            }
+
+            /* Corps */
+            .card-body-custom {
+                padding: 30px 30px 25px;
+            }
+
+            .welcome-text {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+                .welcome-text h5 {
+                    color: #1a3c2a;
+                    font-weight: 600;
+                    font-size: 18px;
+                    margin: 0;
+                }
+
+                .welcome-text p {
+                    color: #6b8f71;
+                    font-size: 13px;
+                    margin: 0;
+                }
+
+            /* Séparateur */
+            .leaf-divider {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 15px;
+                margin: 10px 0 20px;
+            }
+
+                .leaf-divider .line {
+                    flex: 1;
+                    height: 1px;
+                    background: #2d5a3d;
+                    opacity: 0.3;
+                }
+
+                .leaf-divider .leaf-icon {
+                    color: #2d5a3d;
+                    font-size: 18px;
+                    opacity: 0.5;
+                }
+
+            /* Champs de formulaire */
+            .form-floating {
+                margin-bottom: 14px;
+            }
+
+                .form-floating > .form-control {
+                    border: 2px solid #e8f0e8;
+                    border-radius: 12px;
+                    padding: 12px 16px;
+                    height: 54px;
+                    font-size: 14px;
+                    background: #f8fbf8;
+                }
+
+                    .form-floating > .form-control:focus {
+                        border-color: #2d5a3d;
+                        box-shadow: 0 0 0 4px rgba(45, 90, 61, 0.15);
+                        background: #ffffff;
+                    }
+
+                .form-floating > label {
+                    padding: 12px 16px;
+                    font-size: 14px;
+                    color: #6b8f71;
+                    font-weight: 500;
+                }
+
+                    .form-floating > label i {
+                        margin-right: 6px;
+                        color: #2d5a3d;
+                    }
+
+            .form-control:focus ~ label {
+                color: #2d5a3d;
+            }
+
+            /* Checkbox */
+            .form-check {
+                margin-bottom: 18px;
+            }
+
+            .form-check-input:checked {
+                background-color: #2d5a3d;
+                border-color: #2d5a3d;
+            }
+
+            .form-check-input:focus {
+                box-shadow: 0 0 0 3px rgba(45, 90, 61, 0.2);
+                border-color: #2d5a3d;
+            }
+
+            .form-check-label {
+                color: #4a5a4a;
+                font-size: 14px;
+            }
+
+            /* Bouton */
+            .btn-login {
+                background: linear-gradient(135deg, #1a3c2a, #2d5a3d);
+                border: none;
+                border-radius: 12px;
+                padding: 14px;
+                font-size: 16px;
+                font-weight: 600;
+                color: #ffffff;
+                width: 100%;
+            }
+
+                .btn-login:hover {
+                    background: linear-gradient(135deg, #2d5a3d, #3d6b4f);
+                    color: #ffffff;
+                    box-shadow: 0 8px 25px rgba(45, 90, 61, 0.3);
+                }
+
+            /* Comptes par défaut */
+            .default-accounts {
+                background: #f8fbf8;
+                border-radius: 12px;
+                padding: 15px;
+                margin: 20px 0 15px;
+                border: 1px solid #e8f0e8;
+            }
+
+                .default-accounts .title {
+                    color: #2d5a3d;
+                    font-size: 12px;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    font-weight: 600;
+                    text-align: center;
+                    margin-bottom: 8px;
+                }
+
+                .default-accounts .account-item {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 5px 8px;
+                    font-size: 13px;
+                }
+
+            .account-email {
+                color: #4a5a4a;
+                font-weight: 500;
+            }
+
+            .account-password {
+                color: #8a9a8a;
+                font-size: 12px;
+            }
+
+            .badge-role {
+                font-size: 10px;
+                padding: 2px 10px;
+                border-radius: 20px;
+                font-weight: 600;
+                color: #ffffff;
+            }
+
+            .badge-admin {
+                background: #1a3c2a;
+            }
+
+            .badge-user {
+                background: #6b8f71;
+            }
+
+            /* Liens */
+            .link-custom {
+                color: #2d5a3d;
+                text-decoration: none;
+                font-weight: 500;
+            }
+
+                .link-custom:hover {
+                    color: #1a3c2a;
+                    text-decoration: underline;
+                }
+
+            /* Alertes */
+            .alert {
+                border-radius: 12px;
+                border: none;
+                font-size: 14px;
+                padding: 12px 16px;
+            }
+
+            .alert-success {
+                background: #e8f5e9;
+                color: #1a3c2a;
+            }
+
+            .alert-danger {
+                background: #fce4ec;
+                color: #c62828;
+            }
+
+            /* Pied de page */
+            .card-footer-custom {
+                background: #f8fbf8;
+                border-top: 1px solid #e8f0e8;
+                padding: 12px 30px;
+                text-align: center;
+                color: #8a9a8a;
+                font-size: 12px;
+            }
+    </style>
+</head>
+<body>
+
+    <div class="card-login">
+        <!-- En-tête -->
+        <div class="card-header-custom">
+            <div class="logo-icon">
+                <i class="fas fa-leaf"></i>
+            </div>
+            <h4>Coopérative Agricole</h4>
+            <span class="subtitle">
+                <i class="fas fa-seedling"></i>
+                Gestion de coopérative agricole
+                <i class="fas fa-seedling"></i>
+            </span>
+        </div>
+
+        <!-- Corps -->
+        <div class="card-body-custom">
+            <div class="welcome-text">
+                <h5><i class="fas fa-lock text-success"></i> Connexion</h5>
+                <p>Accédez à votre espace de gestion</p>
+            </div>
+
+            <div class="leaf-divider">
+                <span class="line"></span>
+                <span class="leaf-icon"><i class="fas fa-leaf"></i></span>
+                <span class="line"></span>
+            </div>
+
+            @if (TempData["Success"] != null)
+            {
+                <div class="alert alert-success">
+                    <i class="fas fa-check-circle"></i> @TempData["Success"]
+                </div>
+            }
+
+            @if (TempData["Error"] != null)
+            {
+                <div class="alert alert-danger">
+                    <i class="fas fa-exclamation-circle"></i> @TempData["Error"]
+                </div>
+            }
+
+            <form method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger small"></div>
+
+                <div class="form-floating">
+                    <input asp-for="Email" class="form-control" placeholder="nom@exemple.com" />
+                    <label asp-for="Email"><i class="fas fa-envelope"></i> Email</label>
+                    <span asp-validation-for="Email" class="text-danger small"></span>
+                </div>
+
+                <div class="form-floating">
+                    <input asp-for="Password" class="form-control" type="password" placeholder="Mot de passe" />
+                    <label asp-for="Password"><i class="fas fa-key"></i> Mot de passe</label>
+                    <span asp-validation-for="Password" class="text-danger small"></span>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" asp-for="RememberMe" />
+                    <label class="form-check-label" asp-for="RememberMe">
+                        <i class="fas fa-check-circle text-success"></i> Se souvenir de moi
+                    </label>
+                </div>
+
+                <button type="submit" class="btn-login">
+                    <i class="fas fa-sign-in-alt"></i> Se connecter
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </form>
+
+            <!-- Comptes par défaut -->
+            
+
+            <div class="text-center">
+                <p class="mb-0 small text-muted">
+                    <i class="fas fa-user-plus"></i>
+                    <a asp-action="Register" class="link-custom">Créer un compte</a>
+                </p>
+            </div>
+        </div>
+
+        <!-- Pied de page -->
+        <div class="card-footer-custom">
+            <i class="fas fa-leaf"></i>
+            © 2026 - Gestion Coopérative Agricole - L3 IG
+            <i class="fas fa-leaf"></i>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/4.0.0/jquery.validate.unobtrusive.min.js"></script>
+</body>
+</html>

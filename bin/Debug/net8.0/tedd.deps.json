@@ -9,10 +9,12 @@
       "tedd/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "8.0.8",
-          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.8",
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.0",
+          "Microsoft.AspNetCore.Identity.UI": "8.0.0",
           "Microsoft.EntityFrameworkCore": "8.0.8",
-          "Microsoft.EntityFrameworkCore.Design": "8.0.8",
-          "Pomelo.EntityFrameworkCore.MySql": "8.0.0"
+          "Microsoft.EntityFrameworkCore.Design": "8.0.0",
+          "Pomelo.EntityFrameworkCore.MySql": "8.0.0",
+          "QuestPDF": "2024.3.0"
         },
         "runtime": {
           "tedd.dll": {}
@@ -23,25 +25,6 @@
           "lib/net6.0/Humanizer.dll": {
             "assemblyVersion": "2.14.0.0",
             "fileVersion": "2.14.1.48190"
-          }
-        }
-      },
-      "Microsoft.AspNetCore.Cryptography.Internal/8.0.8": {
-        "runtime": {
-          "lib/net8.0/Microsoft.AspNetCore.Cryptography.Internal.dll": {
-            "assemblyVersion": "8.0.0.0",
-            "fileVersion": "8.0.824.36908"
-          }
-        }
-      },
-      "Microsoft.AspNetCore.Cryptography.KeyDerivation/8.0.8": {
-        "dependencies": {
-          "Microsoft.AspNetCore.Cryptography.Internal": "8.0.8"
-        },
-        "runtime": {
-          "lib/net8.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll": {
-            "assemblyVersion": "8.0.0.0",
-            "fileVersion": "8.0.824.36908"
           }
         }
       },
@@ -56,15 +39,22 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Identity.EntityFrameworkCore/8.0.8": {
+      "Microsoft.AspNetCore.Identity.EntityFrameworkCore/8.0.0": {
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.Relational": "8.0.8",
-          "Microsoft.Extensions.Identity.Stores": "8.0.8"
+          "Microsoft.EntityFrameworkCore.Relational": "8.0.8"
         },
         "runtime": {
           "lib/net8.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll": {
-            "assemblyVersion": "8.0.8.0",
-            "fileVersion": "8.0.824.36908"
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.23.53112"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Identity.UI/8.0.0": {
+        "runtime": {
+          "lib/net8.0/Microsoft.AspNetCore.Identity.UI.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.23.53112"
           }
         }
       },
@@ -306,18 +296,18 @@
           }
         }
       },
-      "Microsoft.EntityFrameworkCore.Design/8.0.8": {
+      "Microsoft.EntityFrameworkCore.Design/8.0.0": {
         "dependencies": {
           "Humanizer.Core": "2.14.1",
           "Microsoft.CodeAnalysis.CSharp.Workspaces": "4.5.0",
           "Microsoft.EntityFrameworkCore.Relational": "8.0.8",
-          "Microsoft.Extensions.DependencyModel": "8.0.1",
+          "Microsoft.Extensions.DependencyModel": "8.0.0",
           "Mono.TextTemplating": "2.2.1"
         },
         "runtime": {
           "lib/net8.0/Microsoft.EntityFrameworkCore.Design.dll": {
-            "assemblyVersion": "8.0.8.0",
-            "fileVersion": "8.0.824.36704"
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.23.53103"
           }
         }
       },
@@ -332,42 +322,11 @@
           }
         }
       },
-      "Microsoft.Extensions.DependencyModel/8.0.1": {
+      "Microsoft.Extensions.DependencyModel/8.0.0": {
         "runtime": {
           "lib/net8.0/Microsoft.Extensions.DependencyModel.dll": {
-            "assemblyVersion": "8.0.0.1",
-            "fileVersion": "8.0.724.31311"
-          }
-        }
-      },
-      "Microsoft.Extensions.Identity.Core/8.0.8": {
-        "dependencies": {
-          "Microsoft.AspNetCore.Cryptography.KeyDerivation": "8.0.8",
-          "Microsoft.Extensions.Options": "8.0.2"
-        },
-        "runtime": {
-          "lib/net8.0/Microsoft.Extensions.Identity.Core.dll": {
             "assemblyVersion": "8.0.0.0",
-            "fileVersion": "8.0.824.36908"
-          }
-        }
-      },
-      "Microsoft.Extensions.Identity.Stores/8.0.8": {
-        "dependencies": {
-          "Microsoft.Extensions.Identity.Core": "8.0.8"
-        },
-        "runtime": {
-          "lib/net8.0/Microsoft.Extensions.Identity.Stores.dll": {
-            "assemblyVersion": "8.0.0.0",
-            "fileVersion": "8.0.824.36908"
-          }
-        }
-      },
-      "Microsoft.Extensions.Options/8.0.2": {
-        "runtime": {
-          "lib/net8.0/Microsoft.Extensions.Options.dll": {
-            "assemblyVersion": "8.0.0.0",
-            "fileVersion": "8.0.224.6711"
+            "fileVersion": "8.0.23.53103"
           }
         }
       },
@@ -399,6 +358,136 @@
           "lib/net8.0/Pomelo.EntityFrameworkCore.MySql.dll": {
             "assemblyVersion": "8.0.0.0",
             "fileVersion": "8.0.0.0"
+          }
+        }
+      },
+      "QuestPDF/2024.3.0": {
+        "runtime": {
+          "lib/net8.0/QuestPDF.dll": {
+            "assemblyVersion": "2024.3.0.0",
+            "fileVersion": "2024.3.0.0"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/any/native/LatoFont/Lato-Black.ttf": {
+            "rid": "any",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/any/native/LatoFont/Lato-BlackItalic.ttf": {
+            "rid": "any",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/any/native/LatoFont/Lato-Bold.ttf": {
+            "rid": "any",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/any/native/LatoFont/Lato-BoldItalic.ttf": {
+            "rid": "any",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/any/native/LatoFont/Lato-ExtraBold.ttf": {
+            "rid": "any",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/any/native/LatoFont/Lato-ExtraBoldItalic.ttf": {
+            "rid": "any",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/any/native/LatoFont/Lato-ExtraLight.ttf": {
+            "rid": "any",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/any/native/LatoFont/Lato-ExtraLightItalic.ttf": {
+            "rid": "any",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/any/native/LatoFont/Lato-Italic.ttf": {
+            "rid": "any",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/any/native/LatoFont/Lato-Light.ttf": {
+            "rid": "any",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/any/native/LatoFont/Lato-LightItalic.ttf": {
+            "rid": "any",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/any/native/LatoFont/Lato-Medium.ttf": {
+            "rid": "any",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/any/native/LatoFont/Lato-MediumItalic.ttf": {
+            "rid": "any",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/any/native/LatoFont/Lato-Regular.ttf": {
+            "rid": "any",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/any/native/LatoFont/Lato-SemiBold.ttf": {
+            "rid": "any",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/any/native/LatoFont/Lato-SemiBoldItalic.ttf": {
+            "rid": "any",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/any/native/LatoFont/Lato-Thin.ttf": {
+            "rid": "any",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/any/native/LatoFont/Lato-ThinItalic.ttf": {
+            "rid": "any",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/any/native/LatoFont/OFL.txt": {
+            "rid": "any",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-arm64/native/libQuestPdfSkia.so": {
+            "rid": "linux-arm64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-x64/native/libQuestPdfSkia.so": {
+            "rid": "linux-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-arm64/native/libQuestPdfSkia.dylib": {
+            "rid": "osx-arm64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/native/libQuestPdfSkia.dylib": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x64/native/QuestPdfSkia.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
           }
         }
       },
@@ -485,20 +574,6 @@
       "path": "humanizer.core/2.14.1",
       "hashPath": "humanizer.core.2.14.1.nupkg.sha512"
     },
-    "Microsoft.AspNetCore.Cryptography.Internal/8.0.8": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-VrfHrQwvj8p5W3z+PhHCkUMgpPnThJ9ZDeu+AJrFGWFvHSA6sI7iP/k9LjqkdFXsFezlOOZWNAgB6EH9gCCA4g==",
-      "path": "microsoft.aspnetcore.cryptography.internal/8.0.8",
-      "hashPath": "microsoft.aspnetcore.cryptography.internal.8.0.8.nupkg.sha512"
-    },
-    "Microsoft.AspNetCore.Cryptography.KeyDerivation/8.0.8": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-Ct73TxRAPhQ8OqckzgIUPjJ1/WXnQbOnGjqbvTyPmMptdOg9YJ9wXQh9U+da2s6nki54mcZAyonvaKXLsrXhKQ==",
-      "path": "microsoft.aspnetcore.cryptography.keyderivation/8.0.8",
-      "hashPath": "microsoft.aspnetcore.cryptography.keyderivation.8.0.8.nupkg.sha512"
-    },
     "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore/8.0.8": {
       "type": "package",
       "serviceable": true,
@@ -506,12 +581,19 @@
       "path": "microsoft.aspnetcore.diagnostics.entityframeworkcore/8.0.8",
       "hashPath": "microsoft.aspnetcore.diagnostics.entityframeworkcore.8.0.8.nupkg.sha512"
     },
-    "Microsoft.AspNetCore.Identity.EntityFrameworkCore/8.0.8": {
+    "Microsoft.AspNetCore.Identity.EntityFrameworkCore/8.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-OtjXwZkWdW7UTQ1XR/IGWmeVCujnly0fjjCbUxsjHC1o3cB9iWQRTREdL4931Ulwk9RRgjYQ/mAo7k8ggcZ9xQ==",
-      "path": "microsoft.aspnetcore.identity.entityframeworkcore/8.0.8",
-      "hashPath": "microsoft.aspnetcore.identity.entityframeworkcore.8.0.8.nupkg.sha512"
+      "sha512": "sha512-ua2LSZY/f0BkNUUVPPm83eq4Xnt+FZYutiMimRrzSmv2K2t2Ia/PuP4CfibYNSwnKl6fbZ49Bwn2mQGWnmmvOA==",
+      "path": "microsoft.aspnetcore.identity.entityframeworkcore/8.0.0",
+      "hashPath": "microsoft.aspnetcore.identity.entityframeworkcore.8.0.0.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Identity.UI/8.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-pDr/LtMS23DdDtRdXrQOFZoEUV96SvM2xrW1eWRqbtv+N+tzU1TUoXorEgjDuAA+aijjaFCEOLldd+l38wdmVg==",
+      "path": "microsoft.aspnetcore.identity.ui/8.0.0",
+      "hashPath": "microsoft.aspnetcore.identity.ui.8.0.0.nupkg.sha512"
     },
     "Microsoft.Bcl.AsyncInterfaces/6.0.0": {
       "type": "package",
@@ -562,12 +644,12 @@
       "path": "microsoft.entityframeworkcore.abstractions/8.0.8",
       "hashPath": "microsoft.entityframeworkcore.abstractions.8.0.8.nupkg.sha512"
     },
-    "Microsoft.EntityFrameworkCore.Design/8.0.8": {
+    "Microsoft.EntityFrameworkCore.Design/8.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-MmQAMHdjZR8Iyn/FVQrh9weJQTn0HqtKa3vELS9ffQJat/qXgnTam9M9jqvePphjkYp5Scee+Hy+EJR4nmWmOA==",
-      "path": "microsoft.entityframeworkcore.design/8.0.8",
-      "hashPath": "microsoft.entityframeworkcore.design.8.0.8.nupkg.sha512"
+      "sha512": "sha512-94reKYu63jg4O75UI3LMJHwOSi8tQ6IfubiZhdnSsWcgtmAuF8OyLfjK/MIxuvaQRJZAF6E747FIuxjOtb8/og==",
+      "path": "microsoft.entityframeworkcore.design/8.0.0",
+      "hashPath": "microsoft.entityframeworkcore.design.8.0.0.nupkg.sha512"
     },
     "Microsoft.EntityFrameworkCore.Relational/8.0.8": {
       "type": "package",
@@ -576,33 +658,12 @@
       "path": "microsoft.entityframeworkcore.relational/8.0.8",
       "hashPath": "microsoft.entityframeworkcore.relational.8.0.8.nupkg.sha512"
     },
-    "Microsoft.Extensions.DependencyModel/8.0.1": {
+    "Microsoft.Extensions.DependencyModel/8.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-5Ou6varcxLBzQ+Agfm0k0pnH7vrEITYlXMDuE6s7ZHlZHz6/G8XJ3iISZDr5rfwfge6RnXJ1+Wc479mMn52vjA==",
-      "path": "microsoft.extensions.dependencymodel/8.0.1",
-      "hashPath": "microsoft.extensions.dependencymodel.8.0.1.nupkg.sha512"
-    },
-    "Microsoft.Extensions.Identity.Core/8.0.8": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-ICzYDXrPFaJWX2c/fp+AvltzVu2LZIe5eK5+JbxndTjGqYEzAAW9jwKSaBq9c3QF0wM9c3SjI80E2Kcn+l9prg==",
-      "path": "microsoft.extensions.identity.core/8.0.8",
-      "hashPath": "microsoft.extensions.identity.core.8.0.8.nupkg.sha512"
-    },
-    "Microsoft.Extensions.Identity.Stores/8.0.8": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-Lmv3ZQMmanFVacoGChUIP+PhyIsDPFvhbiMX4o/BwJtViZw2ofHXn0CwTlytkBk1zW6S39rGpkfrtAWIUzzLZA==",
-      "path": "microsoft.extensions.identity.stores/8.0.8",
-      "hashPath": "microsoft.extensions.identity.stores.8.0.8.nupkg.sha512"
-    },
-    "Microsoft.Extensions.Options/8.0.2": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-dWGKvhFybsaZpGmzkGCbNNwBD1rVlWzrZKANLW/CcbFJpCEceMCGzT7zZwHOGBCbwM0SzBuceMj5HN1LKV1QqA==",
-      "path": "microsoft.extensions.options/8.0.2",
-      "hashPath": "microsoft.extensions.options.8.0.2.nupkg.sha512"
+      "sha512": "sha512-NSmDw3K0ozNDgShSIpsZcbFIzBX4w28nDag+TfaQujkXGazBm+lid5onlWoCBy4VsLxqnnKjEBbGSJVWJMf43g==",
+      "path": "microsoft.extensions.dependencymodel/8.0.0",
+      "hashPath": "microsoft.extensions.dependencymodel.8.0.0.nupkg.sha512"
     },
     "Mono.TextTemplating/2.2.1": {
       "type": "package",
@@ -624,6 +685,13 @@
       "sha512": "sha512-wEzKTeYCs/+cGSpT5zE8UrKkJyqpJ24yBufthDoCWUhpCCYUIsMKeX4fvaYcm9mbkfHP2dZ+p6V+ZKTAZ3hXRQ==",
       "path": "pomelo.entityframeworkcore.mysql/8.0.0",
       "hashPath": "pomelo.entityframeworkcore.mysql.8.0.0.nupkg.sha512"
+    },
+    "QuestPDF/2024.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3UsHztlheCEa+EgGaND8jSwQrAduayBwwerzAfb40AJM+epRCz/jome2qadEeFrmAC7bqSsggalsSsAriCKHnA==",
+      "path": "questpdf/2024.3.0",
+      "hashPath": "questpdf.2024.3.0.nupkg.sha512"
     },
     "System.CodeDom/4.4.0": {
       "type": "package",

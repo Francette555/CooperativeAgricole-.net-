@@ -1,0 +1,295 @@
+﻿@model tedd.Models.Utilisateur
+@{
+    ViewData["Title"] = "Inscription";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Coopérative Agricole</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
+    <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                min-height: 100vh;
+                background: #1a3c2a;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 20px;
+            }
+
+            .card-login {
+                width: 100%;
+                max-width: 440px;
+                border: none;
+                border-radius: 20px;
+                background: #ffffff;
+                box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+                overflow: hidden;
+            }
+
+            .card-header-custom {
+                background: linear-gradient(135deg, #1a3c2a, #2d5a3d, #3d6b4f);
+                padding: 30px 30px 25px;
+                text-align: center;
+            }
+
+            .logo-icon {
+                display: inline-block;
+                width: 70px;
+                height: 70px;
+                line-height: 70px;
+                background: rgba(255, 255, 255, 0.15);
+                border-radius: 50%;
+                font-size: 32px;
+                color: #ffffff;
+                border: 2px solid rgba(255, 255, 255, 0.2);
+            }
+
+            .card-header-custom h4 {
+                color: #ffffff;
+                font-family: 'Playfair Display', serif;
+                font-weight: 700;
+                font-size: 24px;
+                margin: 10px 0 0;
+            }
+
+            .card-header-custom .subtitle {
+                color: rgba(255, 255, 255, 0.8);
+                font-size: 13px;
+                display: block;
+                margin-top: 4px;
+            }
+
+            .card-body-custom {
+                padding: 25px 30px 20px;
+            }
+
+            .welcome-text {
+                text-align: center;
+                margin-bottom: 18px;
+            }
+
+                .welcome-text h5 {
+                    color: #1a3c2a;
+                    font-weight: 600;
+                    font-size: 18px;
+                    margin: 0;
+                }
+
+                .welcome-text p {
+                    color: #6b8f71;
+                    font-size: 13px;
+                    margin: 0;
+                }
+
+            .leaf-divider {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 15px;
+                margin: 10px 0 18px;
+            }
+
+                .leaf-divider .line {
+                    flex: 1;
+                    height: 1px;
+                    background: #2d5a3d;
+                    opacity: 0.3;
+                }
+
+                .leaf-divider .leaf-icon {
+                    color: #2d5a3d;
+                    font-size: 18px;
+                    opacity: 0.5;
+                }
+
+            .form-floating {
+                margin-bottom: 14px;
+            }
+
+                .form-floating > .form-control {
+                    border: 2px solid #e8f0e8;
+                    border-radius: 12px;
+                    padding: 12px 16px;
+                    height: 54px;
+                    font-size: 14px;
+                    background: #f8fbf8;
+                }
+
+                    .form-floating > .form-control:focus {
+                        border-color: #2d5a3d;
+                        box-shadow: 0 0 0 4px rgba(45, 90, 61, 0.15);
+                        background: #ffffff;
+                    }
+
+                .form-floating > label {
+                    padding: 12px 16px;
+                    font-size: 14px;
+                    color: #6b8f71;
+                    font-weight: 500;
+                }
+
+                    .form-floating > label i {
+                        margin-right: 6px;
+                        color: #2d5a3d;
+                    }
+
+            .btn-register {
+                background: linear-gradient(135deg, #1a3c2a, #2d5a3d);
+                border: none;
+                border-radius: 12px;
+                padding: 14px;
+                font-size: 16px;
+                font-weight: 600;
+                color: #ffffff;
+                width: 100%;
+            }
+
+                .btn-register:hover {
+                    background: linear-gradient(135deg, #2d5a3d, #3d6b4f);
+                    color: #ffffff;
+                    box-shadow: 0 8px 25px rgba(45, 90, 61, 0.3);
+                }
+
+            .link-custom {
+                color: #2d5a3d;
+                text-decoration: none;
+                font-weight: 500;
+            }
+
+                .link-custom:hover {
+                    color: #1a3c2a;
+                    text-decoration: underline;
+                }
+
+            .alert {
+                border-radius: 12px;
+                border: none;
+                font-size: 14px;
+                padding: 12px 16px;
+            }
+
+            .alert-success {
+                background: #e8f5e9;
+                color: #1a3c2a;
+            }
+
+            .card-footer-custom {
+                background: #f8fbf8;
+                border-top: 1px solid #e8f0e8;
+                padding: 12px 30px;
+                text-align: center;
+                color: #8a9a8a;
+                font-size: 12px;
+            }
+    </style>
+</head>
+<body>
+
+    <div class="card-login">
+        <div class="card-header-custom">
+            <div class="logo-icon">
+                <i class="fas fa-seedling"></i>
+            </div>
+            <h4>Inscription</h4>
+            <span class="subtitle">
+                <i class="fas fa-user-plus"></i>
+                Créer un nouveau compte
+                <i class="fas fa-user-plus"></i>
+            </span>
+        </div>
+
+        <div class="card-body-custom">
+            <div class="welcome-text">
+                <h5><i class="fas fa-user-plus text-success"></i> Nouveau compte</h5>
+                <p>Rejoignez la coopérative agricole</p>
+            </div>
+
+            <div class="leaf-divider">
+                <span class="line"></span>
+                <span class="leaf-icon"><i class="fas fa-leaf"></i></span>
+                <span class="line"></span>
+            </div>
+
+            @if (TempData["Success"] != null)
+            {
+                <div class="alert alert-success">
+                    <i class="fas fa-check-circle"></i> @TempData["Success"]
+                </div>
+            }
+
+            <form method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger small"></div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-floating">
+                            <input asp-for="Prenom" class="form-control" placeholder="Prénom" />
+                            <label asp-for="Prenom"><i class="fas fa-user"></i> Prénom</label>
+                            <span asp-validation-for="Prenom" class="text-danger small"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-floating">
+                            <input asp-for="Nom" class="form-control" placeholder="Nom" />
+                            <label asp-for="Nom"><i class="fas fa-user"></i> Nom</label>
+                            <span asp-validation-for="Nom" class="text-danger small"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-floating">
+                    <input asp-for="Email" class="form-control" placeholder="nom@exemple.com" />
+                    <label asp-for="Email"><i class="fas fa-envelope"></i> Email</label>
+                    <span asp-validation-for="Email" class="text-danger small"></span>
+                </div>
+
+                <div class="form-floating">
+                    <input asp-for="Password" class="form-control" type="password" placeholder="Mot de passe" />
+                    <label asp-for="Password"><i class="fas fa-key"></i> Mot de passe</label>
+                    <span asp-validation-for="Password" class="text-danger small"></span>
+                </div>
+
+                <button type="submit" class="btn-register">
+                    <i class="fas fa-user-plus"></i> S'inscrire
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </form>
+
+            <hr class="my-3" />
+
+            <div class="text-center">
+                <p class="mb-0 small text-muted">
+                    <i class="fas fa-sign-in-alt"></i>
+                    Vous avez déjà un compte ?
+                    <a asp-action="Login" class="link-custom">Se connecter</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="card-footer-custom">
+            <i class="fas fa-leaf"></i>
+            © 2024 - Gestion Coopérative Agricole - L3 IG
+            <i class="fas fa-leaf"></i>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/4.0.0/jquery.validate.unobtrusive.min.js"></script>
+</body>
+</html>

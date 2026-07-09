@@ -1,5 +1,4 @@
-﻿// Controllers/RapportsController.cs
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using System.Globalization;
@@ -30,7 +29,6 @@ namespace tedd.Controllers
         // GET: Rapports/Generate
         public async Task<IActionResult> Generate(int? mois, int? annee)
         {
-            // Valeurs par défaut
             int moisActuel = mois ?? DateTime.Now.Month;
             int anneeActuelle = annee ?? DateTime.Now.Year;
 
@@ -39,7 +37,6 @@ namespace tedd.Controllers
             ViewBag.ListeMois = GetListeMois();
             ViewBag.ListeAnnees = GetListeAnnees();
 
-            // Vérifier si un rapport existe déjà pour cette période
             var rapportExistant = await _context.RapportsFinanciers
                 .FirstOrDefaultAsync(r => r.Mois == CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(moisActuel)
                     && r.Annee == anneeActuelle);
@@ -62,7 +59,6 @@ namespace tedd.Controllers
                 return RedirectToAction(nameof(Generate));
             }
 
-            // Vérifier si le rapport existe déjà
             var rapportExistant = await _context.RapportsFinanciers
                 .FirstOrDefaultAsync(r => r.Mois == CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(mois)
                     && r.Annee == annee);
@@ -100,7 +96,6 @@ namespace tedd.Controllers
                 return NotFound();
             }
 
-            // Récupérer les détails supplémentaires
             var mois = DateTime.ParseExact(rapport.Mois, "MMMM", CultureInfo.CurrentCulture).Month;
             var ventesParProduit = await _rapportService.GetVentesParProduit(mois, rapport.Annee);
             var paiementsNonPayes = await _rapportService.GetPaiementsNonPayes();
@@ -155,22 +150,12 @@ namespace tedd.Controllers
             }
 
             var content = await _rapportService.ExporterRapportPDF(id);
+
+            // Retourner le fichier PDF avec le bon Content-Type
             return File(content, "application/pdf", $"Rapport_{rapport.Mois}_{rapport.Annee}.pdf");
         }
 
-        // GET: Rapports/ExportExcel/5
-        public async Task<IActionResult> ExportExcel(int id)
-        {
-            var rapport = await _rapportService.GetRapportById(id);
-            if (rapport == null)
-            {
-                return NotFound();
-            }
-
-            var content = await _rapportService.ExporterRapportExcel(id);
-            return File(content, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-                $"Rapport_{rapport.Mois}_{rapport.Annee}.xlsx");
-        }
+        // Supprimer ExportExcel
 
         // Méthodes helper
         private List<SelectListItem> GetListeMois()

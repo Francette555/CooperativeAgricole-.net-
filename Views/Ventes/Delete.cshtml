@@ -4,44 +4,121 @@
 }
 
 <div class="container-fluid">
-    <h1 class="mb-4 text-danger">@ViewData["Title"]</h1>
+    <h1 class="mb-4 text-danger">
+        <i class="fas fa-trash-alt me-2"></i>@ViewData["Title"]
+    </h1>
+
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <i class="fas fa-exclamation-circle me-2"></i> @TempData["Error"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    }
 
     <div class="alert alert-warning">
-        <i class="fas fa-exclamation-triangle"></i>
-        Êtes-vous sûr de vouloir supprimer cette vente ? Le stock sera également ajusté.
+        <i class="fas fa-exclamation-triangle me-2"></i>
+        Êtes-vous sûr de vouloir supprimer cette vente ? Le stock sera automatiquement ajusté.
     </div>
 
     <div class="row">
         <div class="col-md-6">
             <div class="card shadow">
+                <div class="card-header bg-danger text-white">
+                    <h5 class="mb-0">
+                        <i class="fas fa-info-circle me-2"></i>Détails de la vente
+                    </h5>
+                </div>
                 <div class="card-body">
                     <dl class="row">
-                        <dt class="col-sm-4 fw-bold">Produit</dt>
-                        <dd class="col-sm-8">@Model.TypeProduit?.Nom</dd>
+                        <dt class="col-sm-4 fw-bold">
+                            <i class="fas fa-box text-primary me-1"></i> Produit
+                        </dt>
+                        <dd class="col-sm-8">@(Model.TypeProduit?.Nom ?? "Produit inconnu")</dd>
 
-                        <dt class="col-sm-4 fw-bold">Quantité</dt>
-                        <dd class="col-sm-8">@Model.Quantite.ToString("N2") @Model.TypeProduit?.Unite</dd>
+                        <dt class="col-sm-4 fw-bold">
+                            <i class="fas fa-weight-hanging text-primary me-1"></i> Quantité
+                        </dt>
+                        <dd class="col-sm-8">@Model.Quantite.ToString("N2") @(Model.TypeProduit?.Unite ?? "kg")</dd>
 
-                        <dt class="col-sm-4 fw-bold">Prix unitaire</dt>
-                        <dd class="col-sm-8">@Model.PrixUnitaire.ToString("C")</dd>
+                        <dt class="col-sm-4 fw-bold">
+                            <i class="fas fa-tag text-primary me-1"></i> Prix unitaire
+                        </dt>
+                        <dd class="col-sm-8">@Model.PrixUnitaire.ToString("N0") Ar</dd>
 
-                        <dt class="col-sm-4 fw-bold">Montant total</dt>
-                        <dd class="col-sm-8">@Model.MontantTotal.ToString("C")</dd>
+                        <dt class="col-sm-4 fw-bold">
+                            <i class="fas fa-calculator text-success me-1"></i> Montant total
+                        </dt>
+                        <dd class="col-sm-8 fw-bold text-success">@Model.MontantTotal.ToString("N0") Ar</dd>
 
-                        <dt class="col-sm-4 fw-bold">Client</dt>
-                        <dd class="col-sm-8">@Model.Client</dd>
+                        <dt class="col-sm-4 fw-bold">
+                            <i class="fas fa-user text-primary me-1"></i> Client
+                        </dt>
+                        <dd class="col-sm-8">@(Model.Client ?? "Client inconnu")</dd>
 
-                        <dt class="col-sm-4 fw-bold">Date de vente</dt>
+                        <dt class="col-sm-4 fw-bold">
+                            <i class="fas fa-calendar-alt text-primary me-1"></i> Date de vente
+                        </dt>
                         <dd class="col-sm-8">@Model.DateVente.ToString("dd/MM/yyyy HH:mm")</dd>
                     </dl>
 
+                    <hr />
+
                     <form asp-action="Delete">
                         <input type="hidden" asp-for="Id" />
-                        <button type="submit" class="btn btn-danger">
-                            <i class="fas fa-trash"></i> Supprimer
-                        </button>
-                        <a asp-action="Index" class="btn btn-secondary">Annuler</a>
+                        <div class="d-flex gap-2">
+                            <button type="submit" class="btn btn-danger">
+                                <i class="fas fa-trash me-2"></i>Confirmer la suppression
+                            </button>
+                            <a asp-action="Index" class="btn btn-secondary">
+                                <i class="fas fa-arrow-left me-2"></i>Annuler
+                            </a>
+                        </div>
                     </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Informations supplémentaires sur le stock -->
+        <div class="col-md-6">
+            <div class="card shadow">
+                <div class="card-header bg-info text-white">
+                    <h5 class="mb-0">
+                        <i class="fas fa-warehouse me-2"></i>Impact sur le stock
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div class="alert alert-info">
+                        <i class="fas fa-info-circle me-2"></i>
+                        La suppression de cette vente va :
+                        <ul class="mb-0 mt-2">
+                            <li>✅ Supprimer la vente du système</li>
+                            <li>✅ Restaurer <strong>@Model.Quantite.ToString("N2") @(Model.TypeProduit?.Unite ?? "kg")</strong> dans le stock</li>
+                        </ul>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="table table-sm">
+                            <tr>
+                                <td><i class="fas fa-box text-muted me-1"></i> Stock actuel :</td>
+                                <td class="text-end fw-bold">@ViewBag.StockActuel?.ToString("N2") @ViewBag.Unite</td>
+                            </tr>
+                            <tr class="table-success">
+                                <td><i class="fas fa-arrow-up text-success me-1"></i> <strong>Nouveau stock :</strong></td>
+                                <td class="text-end fw-bold text-success">@ViewBag.NouveauStock?.ToString("N2") @ViewBag.Unite</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Date de suppression -->
+            <div class="card shadow mt-3">
+                <div class="card-body text-muted">
+                    <small>
+                        <i class="fas fa-clock me-1"></i>
+                        Suppression effectuée le : @DateTime.Now.ToString("dd/MM/yyyy HH:mm")
+                    </small>
                 </div>
             </div>
         </div>

@@ -1,6 +1,7 @@
 ﻿@model tedd.Models.RapportFinancier
 @{
     ViewData["Title"] = $"Rapport - {Model.Periode}";
+    var moisActuel = DateTime.ParseExact(Model.Mois, "MMMM", System.Globalization.CultureInfo.CurrentCulture).Month;
 }
 
 <div class="container-fluid">
@@ -10,21 +11,18 @@
             <small class="text-muted fs-6">@Model.Periode</small>
         </h1>
         <div>
-            <a asp-action="ExportPDF" asp-route-id="@Model.Id" class="btn btn-danger">
-                <i class="fas fa-file-pdf"></i> PDF
-            </a>
-            <a asp-action="ExportExcel" asp-route-id="@Model.Id" class="btn btn-success">
-                <i class="fas fa-file-excel"></i> Excel
+            <a asp-action="ExportPDF" asp-route-id="@Model.Id" class="btn btn-danger" target="_blank">
+                <i class="fas fa-file-pdf me-2"></i>Télécharger PDF
             </a>
             <a asp-action="Index" class="btn btn-secondary">
-                <i class="fas fa-arrow-left"></i> Retour
+                <i class="fas fa-arrow-left me-2"></i>Retour
             </a>
         </div>
     </div>
 
-    <!-- Résumé des indicateurs -->
-    <div class="row mb-4">
-        <div class="col-md-3">
+    <!-- Indicateurs clés -->
+    <div class="row g-3 mb-4">
+        <div class="col-md-3 col-6">
             <div class="card border-left-primary shadow h-100 py-2">
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
@@ -42,7 +40,7 @@
             </div>
         </div>
 
-        <div class="col-md-3">
+        <div class="col-md-3 col-6">
             <div class="card border-left-success shadow h-100 py-2">
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
@@ -60,7 +58,7 @@
             </div>
         </div>
 
-        <div class="col-md-3">
+        <div class="col-md-3 col-6">
             <div class="card border-left-danger shadow h-100 py-2">
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
@@ -78,7 +76,7 @@
             </div>
         </div>
 
-        <div class="col-md-3">
+        <div class="col-md-3 col-6">
             <div class="card border-left-warning shadow h-100 py-2">
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
@@ -99,24 +97,29 @@
         </div>
     </div>
 
+    <!-- Détails -->
     <div class="row">
-        <!-- Détail des ventes par produit -->
-        <div class="col-md-6">
+        <!-- Colonne Gauche : Ventes par produit -->
+        <div class="col-lg-6">
             <div class="card shadow mb-4">
                 <div class="card-header py-3">
                     <h6 class="m-0 font-weight-bold text-primary">
-                        <i class="fas fa-chart-bar me-2"></i>Ventes par produit
+                        <i class="fas fa-chart-bar me-2"></i>Ventes par produit (@Model.Mois @Model.Annee)
                     </h6>
                 </div>
                 <div class="card-body">
-                    @if (ViewBag.VentesParProduit != null && ((Dictionary<string, decimal>)ViewBag.VentesParProduit).Any())
+                    @{
+                        var ventes = ViewBag.VentesParProduit as Dictionary<string, decimal> ?? new Dictionary<string, decimal>();
+                    }
+                    @if (ventes.Any())
                     {
-                        var ventes = (Dictionary<string, decimal>)ViewBag.VentesParProduit;
+                        var totalVentes = ventes.Values.Sum();
                         <div class="table-responsive">
-                            <table class="table table-sm">
-                                <thead>
+                            <table class="table table-sm table-hover">
+                                <thead class="table-light">
                                     <tr>
                                         <th>Produit</th>
+                                        <th class="text-end">Quantité (kg)</th>
                                         <th class="text-end">Montant</th>
                                         <th class="text-end">%</th>
                                     </tr>
@@ -124,18 +127,23 @@
                                 <tbody>
                                     @foreach (var item in ventes)
                                     {
-                                        var pourcentage = ventes.Values.Sum() > 0 ? (item.Value / ventes.Values.Sum() * 100) : 0;
+                                        var pourcentage = totalVentes > 0 ? (item.Value / totalVentes * 100) : 0;
                                         <tr>
-                                            <td>@item.Key</td>
-                                            <td class="text-end">@item.Value.ToString("N0") Ar</td>
+                                            <td>
+                                                <i class="fas fa-box text-primary me-2"></i>
+                                                @item.Key
+                                            </td>
+                                            <td class="text-end">-</td>
+                                            <td class="text-end fw-bold text-success">@item.Value.ToString("N0") Ar</td>
                                             <td class="text-end">@pourcentage.ToString("F1")%</td>
                                         </tr>
                                     }
                                 </tbody>
-                                <tfoot>
-                                    <tr class="fw-bold">
-                                        <td>Total</td>
-                                        <td class="text-end">@ventes.Values.Sum().ToString("N0") Ar</td>
+                                <tfoot class="table-primary fw-bold">
+                                    <tr>
+                                        <td>TOTAL</td>
+                                        <td class="text-end">-</td>
+                                        <td class="text-end">@totalVentes.ToString("N0") Ar</td>
                                         <td class="text-end">100%</td>
                                     </tr>
                                 </tfoot>
@@ -144,14 +152,17 @@
                     }
                     else
                     {
-                        <p class="text-muted">Aucune vente enregistrée pour cette période.</p>
+                        <div class="text-center py-4">
+                            <i class="fas fa-box-open fa-3x text-muted mb-3"></i>
+                            <p class="text-muted">Aucune vente enregistrée pour @Model.Mois @Model.Annee</p>
+                        </div>
                     }
                 </div>
             </div>
         </div>
 
-        <!-- Paiements en attente -->
-        <div class="col-md-6">
+        <!-- Colonne Droite : Paiements en attente -->
+        <div class="col-lg-6">
             <div class="card shadow mb-4">
                 <div class="card-header py-3">
                     <h6 class="m-0 font-weight-bold text-warning">
@@ -159,12 +170,14 @@
                     </h6>
                 </div>
                 <div class="card-body">
-                    @if (ViewBag.PaiementsNonPayes != null && ((List<tedd.Models.Paiement>)ViewBag.PaiementsNonPayes).Any())
+                    @{
+                        var paiements = ViewBag.PaiementsNonPayes as List<tedd.Models.Paiement> ?? new List<tedd.Models.Paiement>();
+                    }
+                    @if (paiements.Any())
                     {
-                        var paiements = (List<tedd.Models.Paiement>)ViewBag.PaiementsNonPayes;
                         <div class="table-responsive">
-                            <table class="table table-sm">
-                                <thead>
+                            <table class="table table-sm table-hover">
+                                <thead class="table-light">
                                     <tr>
                                         <th>Producteur</th>
                                         <th class="text-end">Montant</th>
@@ -175,8 +188,11 @@
                                     @foreach (var item in paiements.Take(10))
                                     {
                                         <tr>
-                                            <td>@item.Producteur?.NomComplet</td>
-                                            <td class="text-end text-warning">@item.Montant.ToString("N0") Ar</td>
+                                            <td>
+                                                <i class="fas fa-user text-warning me-2"></i>
+                                                @item.Producteur?.NomComplet
+                                            </td>
+                                            <td class="text-end fw-bold text-warning">@item.Montant.ToString("N0") Ar</td>
                                             <td>@item.DatePaiement.ToString("dd/MM/yyyy")</td>
                                         </tr>
                                     }
@@ -191,15 +207,19 @@
                                         </tr>
                                     </tfoot>
                                 }
+                                <tfoot class="table-warning fw-bold">
+                                    <tr>
+                                        <td>TOTAL EN ATTENTE</td>
+                                        <td class="text-end">@paiements.Sum(p => p.Montant).ToString("N0") Ar</td>
+                                        <td></td>
+                                    </tr>
+                                </tfoot>
                             </table>
-                        </div>
-                        <div class="text-end">
-                            <span class="fw-bold">Total en attente : @paiements.Sum(p => p.Montant).ToString("N0") Ar</span>
                         </div>
                     }
                     else
                     {
-                        <div class="text-center py-3">
+                        <div class="text-center py-4">
                             <i class="fas fa-check-circle fa-3x text-success mb-3"></i>
                             <p class="text-muted">Aucun paiement en attente</p>
                         </div>
@@ -211,7 +231,7 @@
 
     <!-- Informations du rapport -->
     <div class="card shadow">
-        <div class="card-footer text-muted">
+        <div class="card-footer bg-light text-muted">
             <div class="row">
                 <div class="col-md-6">
                     <small>
@@ -229,3 +249,29 @@
         </div>
     </div>
 </div>
+
+<style>
+    .border-left-primary {
+        border-left: 4px solid #4e73df;
+    }
+
+    .border-left-success {
+        border-left: 4px solid #1cc88a;
+    }
+
+    .border-left-danger {
+        border-left: 4px solid #e74a3b;
+    }
+
+    .border-left-warning {
+        border-left: 4px solid #f6c23e;
+    }
+
+    .card {
+        border-radius: 10px;
+    }
+
+    .table-hover tbody tr:hover {
+        background-color: #f8f9fa;
+    }
+</style>

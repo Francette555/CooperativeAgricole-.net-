@@ -3,56 +3,148 @@
   "WorkspaceRootPath": "D:\\dossierL3\\tedd\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|d:\\dossierl3\\tedd\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|d:\\dossierl3\\tedd\\views\\rapports\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|solutionrelative:views\\rapports\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|d:\\dossierl3\\tedd\\views\\rapports\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|solutionrelative:views\\rapports\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|d:\\dossierl3\\tedd\\views\\rapports\\generate.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|solutionrelative:views\\rapports\\generate.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|d:\\dossierl3\\tedd\\views\\rapports\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|solutionrelative:views\\rapports\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|d:\\dossierl3\\tedd\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|d:\\dossierl3\\tedd\\controllers\\rapportscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|solutionrelative:controllers\\rapportscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|d:\\dossierl3\\tedd\\services\\rapportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|solutionrelative:services\\rapportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|d:\\dossierl3\\tedd\\services\\irapportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|solutionrelative:services\\irapportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|d:\\dossierl3\\tedd\\models\\rapportfinancier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|solutionrelative:models\\rapportfinancier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|d:\\dossierl3\\tedd\\views\\paiements\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|solutionrelative:views\\paiements\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|d:\\dossierl3\\tedd\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|d:\\dossierl3\\tedd\\areas\\identity\\pages\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|solutionrelative:areas\\identity\\pages\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|d:\\dossierl3\\tedd\\views\\auth\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|solutionrelative:views\\auth\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|d:\\dossierl3\\tedd\\views\\auth\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|solutionrelative:views\\auth\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|d:\\dossierl3\\tedd\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|d:\\dossierl3\\tedd\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|d:\\dossierl3\\tedd\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|d:\\dossierl3\\tedd\\views\\paiements\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|solutionrelative:views\\paiements\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|d:\\dossierl3\\tedd\\views\\paiements\\delete.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|solutionrelative:views\\paiements\\delete.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|d:\\dossierl3\\tedd\\views\\paiements\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|solutionrelative:views\\paiements\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|d:\\dossierl3\\tedd\\views\\paiements\\create.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|solutionrelative:views\\paiements\\create.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|d:\\dossierl3\\tedd\\views\\paiements\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|solutionrelative:views\\paiements\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|d:\\dossierl3\\tedd\\data\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|solutionrelative:data\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|d:\\dossierl3\\tedd\\areas\\identity\\pages\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|solutionrelative:areas\\identity\\pages\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|d:\\dossierl3\\tedd\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|d:\\dossierl3\\tedd\\models\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|solutionrelative:models\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|d:\\dossierl3\\tedd\\models\\utilisateur.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|solutionrelative:models\\utilisateur.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|d:\\dossierl3\\tedd\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|d:\\dossierl3\\tedd\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|solutionrelative:views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|d:\\dossierl3\\tedd\\controllers\\ventescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|solutionrelative:controllers\\ventescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|d:\\dossierl3\\tedd\\views\\ventes\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|solutionrelative:views\\ventes\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|d:\\dossierl3\\tedd\\views\\ventes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|solutionrelative:views\\ventes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|d:\\dossierl3\\tedd\\views\\rapports\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|solutionrelative:views\\rapports\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|d:\\dossierl3\\tedd\\views\\rapports\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|solutionrelative:views\\rapports\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|d:\\dossierl3\\tedd\\services\\rapportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|solutionrelative:services\\rapportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|d:\\dossierl3\\tedd\\views\\stocks\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|solutionrelative:views\\stocks\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|d:\\dossierl3\\tedd\\views\\recoltes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|solutionrelative:views\\recoltes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|d:\\dossierl3\\tedd\\views\\producteurs\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|solutionrelative:views\\producteurs\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|d:\\dossierl3\\tedd\\viewmodels\\dashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|solutionrelative:viewmodels\\dashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|d:\\dossierl3\\tedd\\viewmodels\\recenteactivite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|solutionrelative:viewmodels\\recenteactivite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|d:\\dossierl3\\tedd\\services\\irapportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|solutionrelative:services\\irapportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|d:\\dossierl3\\tedd\\views\\rapports\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|solutionrelative:views\\rapports\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|d:\\dossierl3\\tedd\\controllers\\rapportscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|solutionrelative:controllers\\rapportscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|d:\\dossierl3\\tedd\\views\\rapports\\generate.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|solutionrelative:views\\rapports\\generate.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|d:\\dossierl3\\tedd\\models\\rapportfinancier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|solutionrelative:models\\rapportfinancier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|d:\\dossierl3\\tedd\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|d:\\dossierl3\\tedd\\views\\stocks\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -61,10 +153,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|d:\\dossierl3\\tedd\\views\\ventes\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|solutionrelative:views\\ventes\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|d:\\dossierl3\\tedd\\views\\paiements\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|solutionrelative:views\\paiements\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|d:\\dossierl3\\tedd\\views\\recoltes\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -77,26 +165,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|d:\\dossierl3\\tedd\\controllers\\producteurscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|solutionrelative:controllers\\producteurscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|d:\\dossierl3\\tedd\\views\\paiements\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|solutionrelative:views\\paiements\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|d:\\dossierl3\\tedd\\views\\ventes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|solutionrelative:views\\ventes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|d:\\dossierl3\\tedd\\views\\recoltes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|solutionrelative:views\\recoltes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|d:\\dossierl3\\tedd\\views\\paiements\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|solutionrelative:views\\paiements\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|d:\\dossierl3\\tedd\\views\\ventes\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|solutionrelative:views\\ventes\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|d:\\dossierl3\\tedd\\views\\recoltes\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -119,24 +187,8 @@
       "RelativeMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|solutionrelative:views\\producteurs\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|d:\\dossierl3\\tedd\\views\\producteurs\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|solutionrelative:views\\producteurs\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|d:\\dossierl3\\tedd\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|d:\\dossierl3\\tedd\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|d:\\dossierl3\\tedd\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|d:\\dossierl3\\tedd\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|d:\\dossierl3\\tedd\\scripts\\migration.ps1||{3B902123-F8A7-4915-9F01-361F908088D0}",
@@ -167,20 +219,12 @@
       "RelativeMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|solutionrelative:controllers\\paiementscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|d:\\dossierl3\\tedd\\controllers\\ventescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|solutionrelative:controllers\\ventescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|d:\\dossierl3\\tedd\\controllers\\recoltescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|solutionrelative:controllers\\recoltescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|d:\\dossierl3\\tedd\\viewmodels\\producteurviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|solutionrelative:viewmodels\\producteurviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|d:\\dossierl3\\tedd\\viewmodels\\dashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|solutionrelative:viewmodels\\dashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2C291694-3895-1DDD-7E36-46E4BDE3D620}|tedd.csproj|d:\\dossierl3\\tedd\\models\\paiement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -254,154 +298,180 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "D:\\dossierL3\\tedd\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "D:\\dossierL3\\tedd\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAABoAAAAAAAAAAAAAACgAAAAZAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "D:\\dossierL3\\tedd\\Views\\Auth\\Register.cshtml",
+              "RelativeDocumentMoniker": "Views\\Auth\\Register.cshtml",
+              "ToolTip": "D:\\dossierL3\\tedd\\Views\\Auth\\Register.cshtml",
+              "RelativeToolTip": "Views\\Auth\\Register.cshtml",
+              "ViewState": "AgIAAAkBAAAAAAAAAAAAABkBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-07-02T13:36:42.578Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Delete.cshtml",
-              "DocumentMoniker": "D:\\dossierL3\\tedd\\Views\\Rapports\\Delete.cshtml",
-              "RelativeDocumentMoniker": "Views\\Rapports\\Delete.cshtml",
-              "ToolTip": "D:\\dossierL3\\tedd\\Views\\Rapports\\Delete.cshtml",
-              "RelativeToolTip": "Views\\Rapports\\Delete.cshtml",
-              "ViewState": "AgIAABQAAAAAAAAAAAAUwDEAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-07-02T13:34:12.177Z",
+              "WhenOpened": "2026-07-08T11:52:35.733Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "D:\\dossierL3\\tedd\\Views\\Rapports\\Details.cshtml",
-              "RelativeDocumentMoniker": "Views\\Rapports\\Details.cshtml",
-              "ToolTip": "D:\\dossierL3\\tedd\\Views\\Rapports\\Details.cshtml",
-              "RelativeToolTip": "Views\\Rapports\\Details.cshtml",
-              "ViewState": "AgIAAMkAAAAAAAAAAAAUwOYAAAAGAAAAAAAAAA==",
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "D:\\dossierL3\\tedd\\Views\\Auth\\Login.cshtml",
+              "RelativeDocumentMoniker": "Views\\Auth\\Login.cshtml",
+              "ToolTip": "D:\\dossierL3\\tedd\\Views\\Auth\\Login.cshtml",
+              "RelativeToolTip": "Views\\Auth\\Login.cshtml",
+              "ViewState": "AgIAAGsBAAAAAAAAAAAAACIAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-07-02T13:33:48.38Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Generate.cshtml",
-              "DocumentMoniker": "D:\\dossierL3\\tedd\\Views\\Rapports\\Generate.cshtml",
-              "RelativeDocumentMoniker": "Views\\Rapports\\Generate.cshtml",
-              "ToolTip": "D:\\dossierL3\\tedd\\Views\\Rapports\\Generate.cshtml",
-              "RelativeToolTip": "Views\\Rapports\\Generate.cshtml",
-              "ViewState": "AgIAAE0AAAAAAAAAAAAUwGoAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-07-02T13:33:25.7Z",
+              "WhenOpened": "2026-07-08T11:51:56.934Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\dossierL3\\tedd\\Views\\Rapports\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Rapports\\Index.cshtml",
-              "ToolTip": "D:\\dossierL3\\tedd\\Views\\Rapports\\Index.cshtml",
-              "RelativeToolTip": "Views\\Rapports\\Index.cshtml",
-              "ViewState": "AgIAAFIAAAAAAAAAAAAUwG8AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-07-02T13:33:02.451Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\dossierL3\\tedd\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\dossierL3\\tedd\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAF8AAAAAAAAAAAAAAGUAAAArAAAAAAAAAA==",
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "D:\\dossierL3\\tedd\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
+              "ToolTip": "D:\\dossierL3\\tedd\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAFsAAAAAAAAAAAAAAHgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-01T03:38:17.648Z",
+              "WhenOpened": "2026-07-01T03:42:53.317Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "RapportsController.cs",
-              "DocumentMoniker": "D:\\dossierL3\\tedd\\Controllers\\RapportsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\RapportsController.cs",
-              "ToolTip": "D:\\dossierL3\\tedd\\Controllers\\RapportsController.cs",
-              "RelativeToolTip": "Controllers\\RapportsController.cs",
-              "ViewState": "AgIAAKwAAAAAAAAAAAAAANIAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-01T04:51:30.842Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "RapportService.cs",
-              "DocumentMoniker": "D:\\dossierL3\\tedd\\Services\\RapportService.cs",
-              "RelativeDocumentMoniker": "Services\\RapportService.cs",
-              "ToolTip": "D:\\dossierL3\\tedd\\Services\\RapportService.cs",
-              "RelativeToolTip": "Services\\RapportService.cs",
-              "ViewState": "AgIAAP4AAAAAAAAAAAAAAA4BAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-01T04:49:32.925Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "IRapportService.cs",
-              "DocumentMoniker": "D:\\dossierL3\\tedd\\Services\\IRapportService.cs",
-              "RelativeDocumentMoniker": "Services\\IRapportService.cs",
-              "ToolTip": "D:\\dossierL3\\tedd\\Services\\IRapportService.cs",
-              "RelativeToolTip": "Services\\IRapportService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-02T13:43:15.557Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "RapportFinancier.cs",
-              "DocumentMoniker": "D:\\dossierL3\\tedd\\Models\\RapportFinancier.cs",
-              "RelativeDocumentMoniker": "Models\\RapportFinancier.cs",
-              "ToolTip": "D:\\dossierL3\\tedd\\Models\\RapportFinancier.cs",
-              "RelativeToolTip": "Models\\RapportFinancier.cs",
-              "ViewState": "AgIAACgAAAAAAAAAAAAUwEUAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-01T03:48:43.052Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 1,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\dossierL3\\tedd\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
               "ToolTip": "D:\\dossierL3\\tedd\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAIQAAAAAAAAAAAAowHcAAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAAAIoAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-07-02T13:37:41.239Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\dossierL3\\tedd\\Views\\Paiements\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Paiements\\Index.cshtml",
+              "ToolTip": "D:\\dossierL3\\tedd\\Views\\Paiements\\Index.cshtml",
+              "RelativeToolTip": "Views\\Paiements\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-07-01T09:53:40.046Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\dossierL3\\tedd\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "D:\\dossierL3\\tedd\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAwwDwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-01T03:52:46.533Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\dossierL3\\tedd\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\dossierL3\\tedd\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAF4AAAAAAAAAAAAuwHwAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-07-02T13:36:42.578Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Index.cshtml.cs",
+              "DocumentMoniker": "D:\\dossierL3\\tedd\\Views\\Paiements\\Index.cshtml.cs",
+              "RelativeDocumentMoniker": "Views\\Paiements\\Index.cshtml.cs",
+              "ToolTip": "D:\\dossierL3\\tedd\\Views\\Paiements\\Index.cshtml.cs",
+              "RelativeToolTip": "Views\\Paiements\\Index.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-08T11:52:50.122Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Delete.cshtml.cs",
+              "DocumentMoniker": "D:\\dossierL3\\tedd\\Views\\Paiements\\Delete.cshtml.cs",
+              "RelativeDocumentMoniker": "Views\\Paiements\\Delete.cshtml.cs",
+              "ToolTip": "D:\\dossierL3\\tedd\\Views\\Paiements\\Delete.cshtml.cs",
+              "RelativeToolTip": "Views\\Paiements\\Delete.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-08T11:52:49.974Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "D:\\dossierL3\\tedd\\Views\\Paiements\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Views\\Paiements\\Delete.cshtml",
+              "ToolTip": "D:\\dossierL3\\tedd\\Views\\Paiements\\Delete.cshtml",
+              "RelativeToolTip": "Views\\Paiements\\Delete.cshtml",
+              "ViewState": "AgIAACUAAAAAAAAAAAAowDEAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-07-01T09:49:26.995Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Create.cshtml.cs",
+              "DocumentMoniker": "D:\\dossierL3\\tedd\\Views\\Paiements\\Create.cshtml.cs",
+              "RelativeDocumentMoniker": "Views\\Paiements\\Create.cshtml.cs",
+              "ToolTip": "D:\\dossierL3\\tedd\\Views\\Paiements\\Create.cshtml.cs",
+              "RelativeToolTip": "Views\\Paiements\\Create.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-08T11:52:49.822Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 11,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\dossierL3\\tedd\\Views\\Paiements\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Paiements\\Create.cshtml",
+              "ToolTip": "D:\\dossierL3\\tedd\\Views\\Paiements\\Create.cshtml",
+              "RelativeToolTip": "Views\\Paiements\\Create.cshtml",
+              "ViewState": "AgIAACAAAAAAAAAAAAAUwD0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-07-01T09:49:05.279Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "SeedData.cs",
+              "DocumentMoniker": "D:\\dossierL3\\tedd\\Data\\SeedData.cs",
+              "RelativeDocumentMoniker": "Data\\SeedData.cs",
+              "ToolTip": "D:\\dossierL3\\tedd\\Data\\SeedData.cs",
+              "RelativeToolTip": "Data\\SeedData.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAAAuwEIAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-01T05:17:42.417Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "_ViewStart.cshtml",
               "DocumentMoniker": "D:\\dossierL3\\tedd\\Areas\\Identity\\Pages\\_ViewStart.cshtml",
               "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\_ViewStart.cshtml",
@@ -414,20 +484,293 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "SeedData.cs",
-              "DocumentMoniker": "D:\\dossierL3\\tedd\\Data\\SeedData.cs",
-              "RelativeDocumentMoniker": "Data\\SeedData.cs",
-              "ToolTip": "D:\\dossierL3\\tedd\\Data\\SeedData.cs",
-              "RelativeToolTip": "Data\\SeedData.cs",
-              "ViewState": "AgIAADkAAAAAAAAAAAAUwFYAAAABAAAAAAAAAA==",
+              "DocumentIndex": 14,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "D:\\dossierL3\\tedd\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
+              "ToolTip": "D:\\dossierL3\\tedd\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Controllers\\AuthController.cs",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAuwGYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-01T05:17:42.417Z",
+              "WhenOpened": "2026-07-08T11:50:12.977Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
+              "Title": "LoginViewModel.cs",
+              "DocumentMoniker": "D:\\dossierL3\\tedd\\Models\\LoginViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\LoginViewModel.cs",
+              "ToolTip": "D:\\dossierL3\\tedd\\Models\\LoginViewModel.cs",
+              "RelativeToolTip": "Models\\LoginViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-08T11:49:45.121Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Utilisateur.cs",
+              "DocumentMoniker": "D:\\dossierL3\\tedd\\Models\\Utilisateur.cs",
+              "RelativeDocumentMoniker": "Models\\Utilisateur.cs",
+              "ToolTip": "D:\\dossierL3\\tedd\\Models\\Utilisateur.cs",
+              "RelativeToolTip": "Models\\Utilisateur.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-08T11:49:11.768Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\dossierL3\\tedd\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\dossierL3\\tedd\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAF8AAAAAAAAAAAAuwH0AAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-01T03:38:17.648Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "_LoginPartial.cshtml",
+              "DocumentMoniker": "D:\\dossierL3\\tedd\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_LoginPartial.cshtml",
+              "ToolTip": "D:\\dossierL3\\tedd\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_LoginPartial.cshtml",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAuwCkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-07-08T11:27:33.102Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\dossierL3\\tedd\\Views\\Ventes\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Ventes\\Index.cshtml",
+              "ToolTip": "D:\\dossierL3\\tedd\\Views\\Ventes\\Index.cshtml",
+              "RelativeToolTip": "Views\\Ventes\\Index.cshtml",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAowG8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-07-01T09:50:40.066Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "D:\\dossierL3\\tedd\\Views\\Ventes\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Views\\Ventes\\Delete.cshtml",
+              "ToolTip": "D:\\dossierL3\\tedd\\Views\\Ventes\\Delete.cshtml",
+              "RelativeToolTip": "Views\\Ventes\\Delete.cshtml",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAowH0AAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-07-01T09:48:29.695Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "VentesController.cs",
+              "DocumentMoniker": "D:\\dossierL3\\tedd\\Controllers\\VentesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\VentesController.cs",
+              "ToolTip": "D:\\dossierL3\\tedd\\Controllers\\VentesController.cs",
+              "RelativeToolTip": "Controllers\\VentesController.cs",
+              "ViewState": "AgIAAGEAAAAAAAAAAAAowG8AAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-01T03:54:12.794Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\dossierL3\\tedd\\Views\\Rapports\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Rapports\\Index.cshtml",
+              "ToolTip": "D:\\dossierL3\\tedd\\Views\\Rapports\\Index.cshtml",
+              "RelativeToolTip": "Views\\Rapports\\Index.cshtml",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAowHcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-07-02T13:33:02.451Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "D:\\dossierL3\\tedd\\Views\\Rapports\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\Rapports\\Details.cshtml",
+              "ToolTip": "D:\\dossierL3\\tedd\\Views\\Rapports\\Details.cshtml",
+              "RelativeToolTip": "Views\\Rapports\\Details.cshtml",
+              "ViewState": "AgIAAOMAAAAAAAAAAAAowBQBAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-07-02T13:33:48.38Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "RapportService.cs",
+              "DocumentMoniker": "D:\\dossierL3\\tedd\\Services\\RapportService.cs",
+              "RelativeDocumentMoniker": "Services\\RapportService.cs",
+              "ToolTip": "D:\\dossierL3\\tedd\\Services\\RapportService.cs",
+              "RelativeToolTip": "Services\\RapportService.cs",
+              "ViewState": "AgIAADwBAAAAAAAAAAAAAE8BAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-01T04:49:32.925Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\dossierL3\\tedd\\Views\\Stocks\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Stocks\\Index.cshtml",
+              "ToolTip": "D:\\dossierL3\\tedd\\Views\\Stocks\\Index.cshtml",
+              "RelativeToolTip": "Views\\Stocks\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-07-08T04:58:15.039Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\dossierL3\\tedd\\Views\\Producteurs\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Producteurs\\Index.cshtml",
+              "ToolTip": "D:\\dossierL3\\tedd\\Views\\Producteurs\\Index.cshtml",
+              "RelativeToolTip": "Views\\Producteurs\\Index.cshtml",
+              "ViewState": "AgIAADQAAAAAAAAAAAAowEYAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-07-01T09:42:29.233Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "DashboardViewModel.cs",
+              "DocumentMoniker": "D:\\dossierL3\\tedd\\ViewModels\\DashboardViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\DashboardViewModel.cs",
+              "ToolTip": "D:\\dossierL3\\tedd\\ViewModels\\DashboardViewModel.cs",
+              "RelativeToolTip": "ViewModels\\DashboardViewModel.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAABwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-01T03:51:47.545Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\dossierL3\\tedd\\Views\\Recoltes\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Recoltes\\Index.cshtml",
+              "ToolTip": "D:\\dossierL3\\tedd\\Views\\Recoltes\\Index.cshtml",
+              "RelativeToolTip": "Views\\Recoltes\\Index.cshtml",
+              "ViewState": "AgIAADMAAAAAAAAAAAAowEUAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-07-01T09:50:17.565Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "RecenteActivite.cs",
+              "DocumentMoniker": "D:\\dossierL3\\tedd\\ViewModels\\RecenteActivite.cs",
+              "RelativeDocumentMoniker": "ViewModels\\RecenteActivite.cs",
+              "ToolTip": "D:\\dossierL3\\tedd\\ViewModels\\RecenteActivite.cs",
+              "RelativeToolTip": "ViewModels\\RecenteActivite.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-08T04:43:38.231Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "IRapportService.cs",
+              "DocumentMoniker": "D:\\dossierL3\\tedd\\Services\\IRapportService.cs",
+              "RelativeDocumentMoniker": "Services\\IRapportService.cs",
+              "ToolTip": "D:\\dossierL3\\tedd\\Services\\IRapportService.cs",
+              "RelativeToolTip": "Services\\IRapportService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-02T13:43:15.557Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "D:\\dossierL3\\tedd\\Views\\Rapports\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Views\\Rapports\\Delete.cshtml",
+              "ToolTip": "D:\\dossierL3\\tedd\\Views\\Rapports\\Delete.cshtml",
+              "RelativeToolTip": "Views\\Rapports\\Delete.cshtml",
+              "ViewState": "AgIAABQAAAAAAAAAAAAUwCgAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-07-02T13:34:12.177Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "RapportsController.cs",
+              "DocumentMoniker": "D:\\dossierL3\\tedd\\Controllers\\RapportsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\RapportsController.cs",
+              "ToolTip": "D:\\dossierL3\\tedd\\Controllers\\RapportsController.cs",
+              "RelativeToolTip": "Controllers\\RapportsController.cs",
+              "ViewState": "AgIAALAAAAAAAAAAAAAAAMMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-01T04:51:30.842Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "Generate.cshtml",
+              "DocumentMoniker": "D:\\dossierL3\\tedd\\Views\\Rapports\\Generate.cshtml",
+              "RelativeDocumentMoniker": "Views\\Rapports\\Generate.cshtml",
+              "ToolTip": "D:\\dossierL3\\tedd\\Views\\Rapports\\Generate.cshtml",
+              "RelativeToolTip": "Views\\Rapports\\Generate.cshtml",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAUwFUAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-07-02T13:33:25.7Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "RapportFinancier.cs",
+              "DocumentMoniker": "D:\\dossierL3\\tedd\\Models\\RapportFinancier.cs",
+              "RelativeDocumentMoniker": "Models\\RapportFinancier.cs",
+              "ToolTip": "D:\\dossierL3\\tedd\\Models\\RapportFinancier.cs",
+              "RelativeToolTip": "Models\\RapportFinancier.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAADwvxgAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-01T03:48:43.052Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\dossierL3\\tedd\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "D:\\dossierL3\\tedd\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-07-01T03:38:50.987Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "D:\\dossierL3\\tedd\\Views\\Stocks\\Edit.cshtml",
               "RelativeDocumentMoniker": "Views\\Stocks\\Edit.cshtml",
@@ -435,24 +778,11 @@
               "RelativeToolTip": "Views\\Stocks\\Edit.cshtml",
               "ViewState": "AgIAABQAAAAAAAAAAAAUwDEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-07-01T10:28:36.607Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-01T10:28:36.607Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "D:\\dossierL3\\tedd\\Views\\Paiements\\Create.cshtml",
-              "RelativeDocumentMoniker": "Views\\Paiements\\Create.cshtml",
-              "ToolTip": "D:\\dossierL3\\tedd\\Views\\Paiements\\Create.cshtml",
-              "RelativeToolTip": "Views\\Paiements\\Create.cshtml",
-              "ViewState": "AgIAACAAAAAAAAAAAAAUwD0AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-07-01T09:49:05.279Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 37,
               "Title": "Create.cshtml",
               "DocumentMoniker": "D:\\dossierL3\\tedd\\Views\\Ventes\\Create.cshtml",
               "RelativeDocumentMoniker": "Views\\Ventes\\Create.cshtml",
@@ -464,7 +794,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 38,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "D:\\dossierL3\\tedd\\Views\\Recoltes\\Edit.cshtml",
               "RelativeDocumentMoniker": "Views\\Recoltes\\Edit.cshtml",
@@ -476,7 +806,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 39,
               "Title": "Create.cshtml",
               "DocumentMoniker": "D:\\dossierL3\\tedd\\Views\\Recoltes\\Create.cshtml",
               "RelativeDocumentMoniker": "Views\\Recoltes\\Create.cshtml",
@@ -488,7 +818,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 40,
               "Title": "ProducteursController.cs",
               "DocumentMoniker": "D:\\dossierL3\\tedd\\Controllers\\ProducteursController.cs",
               "RelativeDocumentMoniker": "Controllers\\ProducteursController.cs",
@@ -500,67 +830,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\dossierL3\\tedd\\Views\\Paiements\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Paiements\\Index.cshtml",
-              "ToolTip": "D:\\dossierL3\\tedd\\Views\\Paiements\\Index.cshtml",
-              "RelativeToolTip": "Views\\Paiements\\Index.cshtml",
-              "ViewState": "AgIAAEYAAAAAAAAAAAAowEsAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-07-01T09:53:40.046Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\dossierL3\\tedd\\Views\\Ventes\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Ventes\\Index.cshtml",
-              "ToolTip": "D:\\dossierL3\\tedd\\Views\\Ventes\\Index.cshtml",
-              "RelativeToolTip": "Views\\Ventes\\Index.cshtml",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAowE4AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-07-01T09:50:40.066Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\dossierL3\\tedd\\Views\\Recoltes\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Recoltes\\Index.cshtml",
-              "ToolTip": "D:\\dossierL3\\tedd\\Views\\Recoltes\\Index.cshtml",
-              "RelativeToolTip": "Views\\Recoltes\\Index.cshtml",
-              "ViewState": "AgIAAEcAAAAAAAAAAAAowFMAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-07-01T09:50:17.565Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "Delete.cshtml",
-              "DocumentMoniker": "D:\\dossierL3\\tedd\\Views\\Paiements\\Delete.cshtml",
-              "RelativeDocumentMoniker": "Views\\Paiements\\Delete.cshtml",
-              "ToolTip": "D:\\dossierL3\\tedd\\Views\\Paiements\\Delete.cshtml",
-              "RelativeToolTip": "Views\\Paiements\\Delete.cshtml",
-              "ViewState": "AgIAACUAAAAAAAAAAAAowDEAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-07-01T09:49:26.995Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "Delete.cshtml",
-              "DocumentMoniker": "D:\\dossierL3\\tedd\\Views\\Ventes\\Delete.cshtml",
-              "RelativeDocumentMoniker": "Views\\Ventes\\Delete.cshtml",
-              "ToolTip": "D:\\dossierL3\\tedd\\Views\\Ventes\\Delete.cshtml",
-              "RelativeToolTip": "Views\\Ventes\\Delete.cshtml",
-              "ViewState": "AgIAACQAAAAAAAAAAAAowDAAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-07-01T09:48:29.695Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 41,
               "Title": "Delete.cshtml",
               "DocumentMoniker": "D:\\dossierL3\\tedd\\Views\\Recoltes\\Delete.cshtml",
               "RelativeDocumentMoniker": "Views\\Recoltes\\Delete.cshtml",
@@ -572,7 +842,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 42,
               "Title": "Details.cshtml",
               "DocumentMoniker": "D:\\dossierL3\\tedd\\Views\\Producteurs\\Details.cshtml",
               "RelativeDocumentMoniker": "Views\\Producteurs\\Details.cshtml",
@@ -584,7 +854,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 43,
               "Title": "Delete.cshtml",
               "DocumentMoniker": "D:\\dossierL3\\tedd\\Views\\Producteurs\\Delete.cshtml",
               "RelativeDocumentMoniker": "Views\\Producteurs\\Delete.cshtml",
@@ -596,7 +866,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 44,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "D:\\dossierL3\\tedd\\Views\\Producteurs\\Edit.cshtml",
               "RelativeDocumentMoniker": "Views\\Producteurs\\Edit.cshtml",
@@ -608,7 +878,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 45,
               "Title": "Create.cshtml",
               "DocumentMoniker": "D:\\dossierL3\\tedd\\Views\\Producteurs\\Create.cshtml",
               "RelativeDocumentMoniker": "Views\\Producteurs\\Create.cshtml",
@@ -620,19 +890,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\dossierL3\\tedd\\Views\\Producteurs\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Producteurs\\Index.cshtml",
-              "ToolTip": "D:\\dossierL3\\tedd\\Views\\Producteurs\\Index.cshtml",
-              "RelativeToolTip": "Views\\Producteurs\\Index.cshtml",
-              "ViewState": "AgIAAEcAAAAAAAAAAAAUwFQAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-07-01T09:42:29.233Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 46,
               "Title": "launchSettings.json",
               "DocumentMoniker": "D:\\dossierL3\\tedd\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "Properties\\launchSettings.json",
@@ -644,7 +902,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 62,
               "Title": "_ViewImports.cshtml",
               "DocumentMoniker": "D:\\dossierL3\\tedd\\Areas\\Views\\_ViewImports.cshtml",
               "RelativeDocumentMoniker": "Areas\\Views\\_ViewImports.cshtml",
@@ -656,7 +914,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 63,
               "Title": "_ViewStart.cshtml",
               "DocumentMoniker": "D:\\dossierL3\\tedd\\Areas\\Views\\_ViewStart.cshtml",
               "RelativeDocumentMoniker": "Areas\\Views\\_ViewStart.cshtml",
@@ -668,43 +926,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "D:\\dossierL3\\tedd\\Data\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
-              "ToolTip": "D:\\dossierL3\\tedd\\Data\\ApplicationDbContext.cs",
-              "RelativeToolTip": "Data\\ApplicationDbContext.cs",
-              "ViewState": "AgIAACgAAAAAAAAAAAAwwDoAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-01T03:42:53.317Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "D:\\dossierL3\\tedd\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
-              "ToolTip": "D:\\dossierL3\\tedd\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AgIAAFUAAAAAAAAAAAAwwGcAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-01T03:52:46.533Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\dossierL3\\tedd\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "D:\\dossierL3\\tedd\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-07-01T03:38:50.987Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 47,
               "Title": "migration.ps1",
               "DocumentMoniker": "D:\\dossierL3\\tedd\\scripts\\migration.ps1",
               "RelativeDocumentMoniker": "scripts\\migration.ps1",
@@ -716,7 +938,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 49,
               "Title": "tedd",
               "DocumentMoniker": "D:\\dossierL3\\tedd\\tedd.csproj",
               "RelativeDocumentMoniker": "tedd.csproj",
@@ -727,7 +949,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 48,
               "Title": "tedd.csproj",
               "DocumentMoniker": "D:\\dossierL3\\tedd\\tedd.csproj",
               "RelativeDocumentMoniker": "tedd.csproj",
@@ -739,7 +961,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 50,
               "Title": "site.js",
               "DocumentMoniker": "D:\\dossierL3\\tedd\\wwwroot\\js\\site.js",
               "RelativeDocumentMoniker": "wwwroot\\js\\site.js",
@@ -751,7 +973,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 51,
               "Title": "site.css",
               "DocumentMoniker": "D:\\dossierL3\\tedd\\wwwroot\\css\\site.css",
               "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
@@ -763,7 +985,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 64,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\dossierL3\\tedd\\Areas\\Views\\Rapports\\Index.cshtml",
               "RelativeDocumentMoniker": "Areas\\Views\\Rapports\\Index.cshtml",
@@ -775,7 +997,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 65,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\dossierL3\\tedd\\Areas\\Views\\Stocks\\Index.cshtml",
               "RelativeDocumentMoniker": "Areas\\Views\\Stocks\\Index.cshtml",
@@ -787,7 +1009,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 66,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\dossierL3\\tedd\\Areas\\Views\\Paiements\\Index.cshtml",
               "RelativeDocumentMoniker": "Areas\\Views\\Paiements\\Index.cshtml",
@@ -799,7 +1021,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 67,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\dossierL3\\tedd\\Areas\\Views\\Ventes\\Index.cshtml",
               "RelativeDocumentMoniker": "Areas\\Views\\Ventes\\Index.cshtml",
@@ -811,7 +1033,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 68,
               "Title": "Create.cshtml",
               "DocumentMoniker": "D:\\dossierL3\\tedd\\Areas\\Views\\Recoltes\\Create.cshtml",
               "RelativeDocumentMoniker": "Areas\\Views\\Recoltes\\Create.cshtml",
@@ -823,7 +1045,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 69,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\dossierL3\\tedd\\Areas\\Views\\Recoltes\\Index.cshtml",
               "RelativeDocumentMoniker": "Areas\\Views\\Recoltes\\Index.cshtml",
@@ -835,7 +1057,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 52,
               "Title": "StocksController.cs",
               "DocumentMoniker": "D:\\dossierL3\\tedd\\Controllers\\StocksController.cs",
               "RelativeDocumentMoniker": "Controllers\\StocksController.cs",
@@ -847,7 +1069,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 70,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\dossierL3\\tedd\\Areas\\Views\\Producteurs\\Index.cshtml",
               "RelativeDocumentMoniker": "Areas\\Views\\Producteurs\\Index.cshtml",
@@ -859,7 +1081,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 71,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "D:\\dossierL3\\tedd\\Areas\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Areas\\Views\\Shared\\_Layout.cshtml",
@@ -871,7 +1093,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 53,
               "Title": "PaiementsController.cs",
               "DocumentMoniker": "D:\\dossierL3\\tedd\\Controllers\\PaiementsController.cs",
               "RelativeDocumentMoniker": "Controllers\\PaiementsController.cs",
@@ -883,19 +1105,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
-              "Title": "VentesController.cs",
-              "DocumentMoniker": "D:\\dossierL3\\tedd\\Controllers\\VentesController.cs",
-              "RelativeDocumentMoniker": "Controllers\\VentesController.cs",
-              "ToolTip": "D:\\dossierL3\\tedd\\Controllers\\VentesController.cs",
-              "RelativeToolTip": "Controllers\\VentesController.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAAAEEAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-01T03:54:12.794Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 54,
               "Title": "RecoltesController.cs",
               "DocumentMoniker": "D:\\dossierL3\\tedd\\Controllers\\RecoltesController.cs",
               "RelativeDocumentMoniker": "Controllers\\RecoltesController.cs",
@@ -907,7 +1117,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 55,
               "Title": "ProducteurViewModel.cs",
               "DocumentMoniker": "D:\\dossierL3\\tedd\\ViewModels\\ProducteurViewModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\ProducteurViewModel.cs",
@@ -919,19 +1129,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
-              "Title": "DashboardViewModel.cs",
-              "DocumentMoniker": "D:\\dossierL3\\tedd\\ViewModels\\DashboardViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModels\\DashboardViewModel.cs",
-              "ToolTip": "D:\\dossierL3\\tedd\\ViewModels\\DashboardViewModel.cs",
-              "RelativeToolTip": "ViewModels\\DashboardViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-01T03:51:47.545Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 56,
               "Title": "Paiement.cs",
               "DocumentMoniker": "D:\\dossierL3\\tedd\\Models\\Paiement.cs",
               "RelativeDocumentMoniker": "Models\\Paiement.cs",
@@ -943,7 +1141,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 57,
               "Title": "Vente.cs",
               "DocumentMoniker": "D:\\dossierL3\\tedd\\Models\\Vente.cs",
               "RelativeDocumentMoniker": "Models\\Vente.cs",
@@ -955,7 +1153,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 58,
               "Title": "Stock.cs",
               "DocumentMoniker": "D:\\dossierL3\\tedd\\Models\\Stock.cs",
               "RelativeDocumentMoniker": "Models\\Stock.cs",
@@ -967,7 +1165,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 60,
               "Title": "Recolte.cs",
               "DocumentMoniker": "D:\\dossierL3\\tedd\\Models\\Recolte.cs",
               "RelativeDocumentMoniker": "Models\\Recolte.cs",
@@ -979,7 +1177,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 59,
               "Title": "TypeProduit.cs",
               "DocumentMoniker": "D:\\dossierL3\\tedd\\Models\\TypeProduit.cs",
               "RelativeDocumentMoniker": "Models\\TypeProduit.cs",
@@ -991,7 +1189,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 61,
               "Title": "Producteur.cs",
               "DocumentMoniker": "D:\\dossierL3\\tedd\\Models\\Producteur.cs",
               "RelativeDocumentMoniker": "Models\\Producteur.cs",
